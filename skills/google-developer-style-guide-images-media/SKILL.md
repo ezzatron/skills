@@ -5,7 +5,7 @@ description: >-
   Covers alt text, image quality, screenshots, diagrams, and figure formatting.
 ---
 
-# Images & media reference
+# Images and media reference
 
 ## General principle
 
@@ -13,7 +13,7 @@ Use images **only** when they provide useful visual explanations that are
 difficult to express with words. For screenshots, only capture UIs important to
 the discussion.
 
-## Creating & saving images
+## Creating and saving images
 
 ### Format selection
 

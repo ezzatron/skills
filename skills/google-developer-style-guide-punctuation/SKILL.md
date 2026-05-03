@@ -406,7 +406,7 @@ Don't use slash-based abbreviations; spell out.
 
 ---
 
-## Apostrophes & possessives
+## Apostrophes and possessives
 
 ### Straight apostrophes
 

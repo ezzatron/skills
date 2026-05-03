@@ -6,7 +6,7 @@ description: >-
   restrictions on pre-announcing features.
 ---
 
-# Voice & tone
+# Voice and tone
 
 ## Tone
 
@@ -52,7 +52,7 @@ and consistent to aid translation and readers with varying English proficiency.
 
 ---
 
-## Politeness & _please_
+## Politeness and _please_
 
 **Rule:** Do not use _please_ in instructions.
 
@@ -83,7 +83,7 @@ clear who is acting.
 
 ---
 
-## Second person & first person
+## Second person and first person
 
 ### Address the reader as _you_
 
