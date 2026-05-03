@@ -482,7 +482,7 @@ Use the **formal type name** (often all-caps), not the extension.
 | `.txt`           | text file       |
 | `.wasm`          | Wasm file       |
 | `.yaml`          | YAML file       |
-| `.zip`           | zip file        |
+| `.zip`           | ZIP file        |
 
 ---
 
