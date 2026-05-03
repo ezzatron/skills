@@ -199,6 +199,9 @@ style is assigned a scope.
 
 ### Supported languages
 
+In the scope columns below, replace `.ext` with the file's actual extension
+(e.g., `text.comment.line.c`, `text.comment.block.py`).
+
 | Language   | Extensions                           | Line comment scopes                            | Block comment scopes                   |
 | ---------- | ------------------------------------ | ---------------------------------------------- | -------------------------------------- |
 | C          | `.c`, `.h`                           | `//` → `text.comment.line.ext`                 | `/*` → `text.comment.block.ext`        |
