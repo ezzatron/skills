@@ -75,11 +75,11 @@ clear who is acting.
 
 ### Exceptions—passive voice is acceptable when
 
-| Reason                                | Example                                                                             |
-| ------------------------------------- | ----------------------------------------------------------------------------------- |
-| Emphasize an object over an action    | The file is saved.                                                                  |
+| Reason                                | Example                                                                               |
+| ------------------------------------- | ------------------------------------------------------------------------------------- |
+| Emphasize an object over an action    | The file is saved.                                                                    |
 | De-emphasize a subject / avoid blame  | Over 50 conflicts were found in the file. _(not "You created over 50 conflicts ...")_ |
-| Reader doesn't need to know who acted | The database was purged in January.                                                 |
+| Reader doesn't need to know who acted | The database was purged in January.                                                   |
 
 ---
 
@@ -97,7 +97,8 @@ making decisions.
 | Consider adding a description to your table.                         | Let's add a description to our table.                                      |
 | This document shows you how to develop an app for your organization. | This document shows the user how to develop an app for their organization. |
 
-**Use _user_ only** to refer to the end user of software the reader is building—not as a synonym for the reader.
+**Use _user_ only** to refer to the end user of software the reader is
+building—not as a synonym for the reader.
 
 ### Imperative mood
 

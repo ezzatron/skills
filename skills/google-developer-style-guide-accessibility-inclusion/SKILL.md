@@ -19,8 +19,8 @@ description: >-
 - Avoid unnecessary font formatting (screen readers explicitly describe text
   modifications).
 - Document specialized accessibility features of the product explicitly.
-- Don't force line breaks (hard returns) within sentences/paragraphs—breaks
-  fail in resized windows or enlarged text.
+- Don't force line breaks (hard returns) within sentences/paragraphs—breaks fail
+  in resized windows or enlarged text.
 - Avoid camelCase and ALL CAPS—some screen readers read capitals individually;
   some languages are unicase.
 - Not all punctuation is read by screen readers. Convey meaning without relying
@@ -134,8 +134,8 @@ description: >-
 
 - Use standard site styles and JS as much as possible.
 - Accessible color contrast: 4.5:1 ratio minimum for text.
-- Don't use `visibility:hidden` or `display:none`—both hide content from
-  screen readers.
+- Don't use `visibility:hidden` or `display:none`—both hide content from screen
+  readers.
 - Avoid `mouseover` events; if used, add alternate `focus` and `blur` events for
   keyboard users.
 - Ordering/positioning in CSS must reflect DOM and reading order (left-to-right,
@@ -166,15 +166,15 @@ communicating information.**
 | Click **Save**.          | _(describe visual appearance)_ |
 | Click **Notifications**. | Click the bell icon.           |
 
-- Don't use directional language (_above_, _below_, _right-hand side_)—fails
-  for accessibility and RTL localization.
+- Don't use directional language (_above_, _below_, _right-hand side_)—fails for
+  accessibility and RTL localization.
 - Don't use directional terms for document position. Use _earlier_, _preceding_,
   or _following_ instead.
 
-| Do                          | Don't                                                      |
-| --------------------------- | ---------------------------------------------------------- |
-| In the preceding diagram, ... | In the diagram above, ...                                    |
-| Click **Menu**.             | In the left-side panel, click the button with three lines. |
+| Do                            | Don't                                                      |
+| ----------------------------- | ---------------------------------------------------------- |
+| In the preceding diagram, ... | In the diagram above, ...                                  |
+| Click **Menu**.               | In the left-side panel, click the button with three lines. |
 
 ---
 
@@ -200,7 +200,7 @@ examples.
 | Do                                                   | Don't                                             |
 | ---------------------------------------------------- | ------------------------------------------------- |
 | Equipment installation takes around 16 person-hours. | Equipment installation takes around 16 man-hours. |
-| ...help all of humanity.                               | ...help all of mankind.                             |
+| ...help all of humanity.                             | ...help all of mankind.                           |
 
 ## Violent language
 
@@ -248,11 +248,11 @@ If replacing an established term could cause confusion:
 1. On first use, refer to the non-inclusive term in parentheses.
 2. Use the inclusive replacement term for the rest of the document.
 
-| Example                                                                                                   |
-| --------------------------------------------------------------------------------------------------------- |
+| Example                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------- |
 | Add them to an allowlist (sometimes called a _whitelist_). Anyone who isn't on the allowlist is blocked ... |
 | A Jenkins controller (master) handles HTTP requests. The Jenkins controller is designed to ...              |
-| Servers are treated as commodities (sometimes described by using the metaphor _cattle, not pets_).        |
+| Servers are treated as commodities (sometimes described by using the metaphor _cattle, not pets_).          |
 
 When possible, rewrite instead of direct word replacement:
 
@@ -299,11 +299,11 @@ ignored:
 
 ## Key definitions
 
-| Term                 | Meaning                                                                                               |
-| -------------------- | ----------------------------------------------------------------------------------------------------- |
+| Term                 | Meaning                                                                                             |
+| -------------------- | --------------------------------------------------------------------------------------------------- |
 | Localization         | Adapting a product and docs for a specific country (currencies, units, etc.)—more than translation. |
-| Translation          | Converting one language to another; may involve localization but not synonymous.                      |
-| Internationalization | Designing a product/docs to minimize localization effort (e.g., externalizing UI strings).            |
+| Translation          | Converting one language to another; may involve localization but not synonymous.                    |
+| Internationalization | Designing a product/docs to minimize localization effort (e.g., externalizing UI strings).          |
 
 ## Clear, concise, unambiguous language
 
@@ -368,10 +368,10 @@ Replace phrasal/compound verbs with simpler verbs when possible.
   just _`example.yaml`_.
 - Repeat words when redundancy improves comprehension:
 
-| Do                                                                                               | Don't                                                                                |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Do                                                                                                 | Don't                                                                                  |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | If the VM has started and if you're able to connect...                                             | If the VM has started and you're able to connect...                                    |
-| ...creates both IAM segmentation and network segmentation...                                         | ...creates both IAM and network segmentation...                                          |
+| ...creates both IAM segmentation and network segmentation...                                       | ...creates both IAM and network segmentation...                                        |
 | An egress rule whose action is `allow`, whose destination is `0.0.0.0/0`, and whose priority is... | An egress rule whose action is `allow`, destination is `0.0.0.0/0`, and priority is... |
 
 - Use helper words (_then_, _that_, _of_):
@@ -379,7 +379,7 @@ Replace phrasal/compound verbs with simpler verbs when possible.
 | Do                                                                     | Don't                                                             |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | If the attribute key is not found, then the default value is returned. | If the attribute key is not found, the default value is returned. |
-| ...assumes that you have the following knowledge:                        | ...assumes you have the following knowledge:                        |
+| ...assumes that you have the following knowledge:                      | ...assumes you have the following knowledge:                      |
 | Identify all of the datasets.                                          | Identify all the datasets.                                        |
 | Start the profiler, and then run the app.                              | Start the profiler, then run the app.                             |
 

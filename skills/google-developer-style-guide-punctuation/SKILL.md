@@ -52,10 +52,10 @@ Add a comma **only if** the sentence could be misread without one.
   however, therefore_) and a comma **after** it.
 - Don't put a comma before _because_ unless it starts a nonrestrictive clause.
 
-| Do                                                                              | Don't                                                                          |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Name of the group, which has a maximum length of 200 characters.                | Name of the group which has a maximum length of 200 characters.                |
-| The variable must have a value; otherwise, the server returns an error.         | The variable must have a value otherwise the server returns an error.          |
+| Do                                                                                  | Don't                                                                              |
+| ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Name of the group, which has a maximum length of 200 characters.                    | Name of the group which has a maximum length of 200 characters.                    |
+| The variable must have a value; otherwise, the server returns an error.             | The variable must have a value otherwise the server returns an error.              |
 | ...backend services and backend buckets, because each set of keys is independent... | ...backend services and backend buckets because each set of keys is independent... |
 
 ---
@@ -127,8 +127,8 @@ dash.
 
 ### Colons instead of dashes
 
-In description lists, use a colon—not a dash—to separate item from
-description (see Colons section).
+In description lists, use a colon—not a dash—to separate item from description
+(see Colons section).
 
 ---
 
@@ -252,7 +252,8 @@ items/headings).
 
 ### With lists
 
-See the Lists section in the `google-developer-style-guide-structure` skill for rules on end punctuation in list items.
+See the Lists section in the `google-developer-style-guide-structure` skill for
+rules on end punctuation in list items.
 
 ### With URLs
 
@@ -262,8 +263,8 @@ URL's last character and the period. Techniques:
 - Rewrite so URL isn't sentence-final.
 - Place URL on its own line, omitting the period.
 
-| Do                                              | Don't                                           |
-| ----------------------------------------------- | ----------------------------------------------- |
+| Do                                                | Don't                                             |
+| ------------------------------------------------- | ------------------------------------------------- |
 | ...Privacy Policy:<br>http://example.com/privacy/ | ...Privacy Policy at http://example.com/privacy/. |
 
 ### With quotation marks
@@ -345,11 +346,11 @@ omitted portions—but **never** at the beginning or end of the quote.
 ### Formatting
 
 - Use three actual periods (`...`), not the ellipsis character (`…`).
-- One space before and after—unless a punctuation mark immediately follows
-  (then no space after).
+- One space before and after—unless a punctuation mark immediately follows (then
+  no space after).
 
-| Do                                 | Don't                           |
-| ---------------------------------- | ------------------------------- |
+| Do                                     | Don't                               |
+| -------------------------------------- | ----------------------------------- |
 | ...code in there ... we'll explain...  | ...code in there...we'll explain... |
 | ...code in there ...; we'll explain... | —                                   |
 
@@ -369,7 +370,7 @@ Don't use slashes to separate alternatives; spell out _and_ / _or_.
 
 | Do                                  | Don't                       |
 | ----------------------------------- | --------------------------- |
-| ...developed and is hosted by...        | ...developed/hosted by...       |
+| ...developed and is hosted by...    | ...developed/hosted by...   |
 | Call this method five or six times. | Call this method 5/6 times. |
 
 ### _And/or_
@@ -377,10 +378,10 @@ Don't use slashes to separate alternatives; spell out _and_ / _or_.
 Often _and_ implies _or_. Avoid _and/or_ except where space is limited (e.g.,
 tables).
 
-| Do                                      | Don't                                   |
-| --------------------------------------- | --------------------------------------- |
-| You can view and edit your own data.    | You can view and/or edit your own data. |
-| ...raw events, processed events, or both. | ...raw and/or processed events.           |
+| Do                                        | Don't                                   |
+| ----------------------------------------- | --------------------------------------- |
+| You can view and edit your own data.      | You can view and/or edit your own data. |
+| ...raw events, processed events, or both. | ...raw and/or processed events.         |
 
 ### File paths and URLs
 
@@ -434,10 +435,10 @@ If a possessive is awkward, rewrite.
 Don't form possessives from product/feature names or trademarks when describing
 function/performance. Use the name as a modifier or rewrite with _of_.
 
-| Do                                         | Don't                                 |
-| ------------------------------------------ | ------------------------------------- |
+| Do                                           | Don't                                   |
+| -------------------------------------------- | --------------------------------------- |
 | ...monitor Google Search performance.        | ...monitor Google Search's performance. |
-| ...monitor the performance of Google Search. | —                                     |
+| ...monitor the performance of Google Search. | —                                       |
 
 Company name possessives are OK for non-trademark uses: _Google's new office is
 nearby._
@@ -466,12 +467,12 @@ mistakes; hard to proofread; difficult to type on some platforms.
 
 ### When to use quotation marks
 
-| Use case                                                  | Example                                                        |
-| --------------------------------------------------------- | -------------------------------------------------------------- |
+| Use case                                                  | Example                                                          |
+| --------------------------------------------------------- | ---------------------------------------------------------------- |
 | Title of shorter work (article, episode) not linked       | ...described in the section "Deploying containers" of the video. |
 | Title of parent doc when linking to a subsection          | The [ML workflow section](...) of "Introduction to Vertex AI"... |
 | Direct quotation / slogan                                 | Martin Fowler has said, "We are still learning..."               |
-| Metaphorical use of a term (not established domain usage) | This forms an "island" within the network.                     |
+| Metaphorical use of a term (not established domain usage) | This forms an "island" within the network.                       |
 
 Full-length work titles: use _italics_, not quotation marks.
 
@@ -500,6 +501,6 @@ Use **only** for:
 1. Code examples in languages that use single quotes.
 2. Nested quotations (single inside double).
 
-| Do                                                 | Don't                                              |
-| -------------------------------------------------- | -------------------------------------------------- |
+| Do                                                   | Don't                                                |
+| ---------------------------------------------------- | ---------------------------------------------------- |
 | She said, "I heard him shout 'Help,' and saw him..." | She said, 'I heard him shout "Help", and saw him...' |

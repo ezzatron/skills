@@ -51,7 +51,6 @@ The word list contains **597 entries** across the following recommendation
 categories:
 
 - **Recommended** (358)—Terms that are approved for use.
-- **Not recommended** (147)—Terms to avoid, usually with suggested
-  alternatives.
+- **Not recommended** (147)—Terms to avoid, usually with suggested alternatives.
 - **Use with care** (92)—Terms that are acceptable in specific contexts but
   should be used carefully.

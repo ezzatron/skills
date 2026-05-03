@@ -211,8 +211,8 @@ temperature.
 
 | ✅ Do                                                                        | ❌ Don't                                         |
 | ---------------------------------------------------------------------------- | ------------------------------------------------ |
-| `During warmer months, data centers face a higher risk of cooling failures.` | `During summer months, ...`                        |
-| `In November and December, data centers experience higher traffic volume.`   | `In winter, ...`                                   |
+| `During warmer months, data centers face a higher risk of cooling failures.` | `During summer months, ...`                      |
+| `In November and December, data centers experience higher traffic volume.`   | `In winter, ...`                                 |
 | `Changes are released in October of each year.`                              | `Changes are released in the Fall of each year.` |
 
 ---
@@ -283,8 +283,8 @@ Number + unit modifying a noun: don't hyphenate unless needed for clarity.
 
 ## Ranges of numbers with units
 
-Repeat the unit for each number. Use word "to" (not hyphen—avoids confusion
-with minus).
+Repeat the unit for each number. Use word "to" (not hyphen—avoids confusion with
+minus).
 
 - ✅ `-40 °C to 85 °C`
 - ❌ `-40-85 °C`

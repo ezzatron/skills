@@ -40,4 +40,3 @@ jq '.[] | select(.term == "click")' skills/google-developer-style-guide-word-lis
 # List all "not recommended" terms
 jq '[.[] | select(.recommendation == "not recommended")] | length' skills/google-developer-style-guide-word-list/word-list.json
 ```
-

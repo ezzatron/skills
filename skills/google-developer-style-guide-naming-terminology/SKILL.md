@@ -89,8 +89,8 @@ In most contexts, using _acronym_ for both acronyms and initialisms is fine.
 
 Some words have long and short forms (e.g., _application_/_app_,
 _demonstration_/_demo_, _synchronize_/_sync_). Short forms are **not**
-abbreviations—no period needed. Use the speaking test: if you say the short
-form as a word, treat it as a word.
+abbreviations—no period needed. Use the speaking test: if you say the short form
+as a word, treat it as a word.
 
 ## When to use abbreviations
 
@@ -197,11 +197,11 @@ _an SAP_.
 
 ## Word list guidance levels
 
-| Label                                                 | Meaning                                                                                                        |
-| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Label                                                 | Meaning                                                                                                      |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | **Use with caution**                                  | Avoid when possible; term may be ambiguous/obscure. Alternatives suggested. OK if needed—define or use once. |
-| **Don't use**                                         | Preferred to never use. May be ambiguous, offensive, or non-inclusive. If in code, replace or write around.    |
-| **Android** / **Google Cloud** / **Google Workspace** | Guidance applies only to that product's documentation.                                                         |
+| **Don't use**                                         | Preferred to never use. May be ambiguous, offensive, or non-inclusive. If in code, replace or write around.  |
+| **Android** / **Google Cloud** / **Google Workspace** | Guidance applies only to that product's documentation.                                                       |
 
 ## Key spelling/usage entries (selected)
 

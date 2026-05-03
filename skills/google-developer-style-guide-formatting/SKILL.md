@@ -70,36 +70,36 @@ Use code font (`` ` `` / `<code>`) in running text for anything related to code.
 
 ## Items that MUST be in code font
 
-| Item                                          | Example                                                      |
-| --------------------------------------------- | ------------------------------------------------------------ |
-| Attribute names and values                    | `imageURL`, `e2-highcpu-16`                                  |
-| Class names                                   | `SnapshotDiskOperator`                                       |
-| Command output                                | `Found sysprep-specialize-script-ps1 in metadata.`           |
-| CLI utility names                             | `gcloud`, `gsutil`, `kubectl`, `bq`                          |
-| Data types                                    | `STRUCT`                                                     |
-| Database elements (rows, columns)             | `month`, `datetime`                                          |
-| Defined (constant) values                     | `"San Francisco"`                                            |
-| DNS record types                              | `AAAA`                                                       |
+| Item                                          | Example                                                    |
+| --------------------------------------------- | ---------------------------------------------------------- |
+| Attribute names and values                    | `imageURL`, `e2-highcpu-16`                                |
+| Class names                                   | `SnapshotDiskOperator`                                     |
+| Command output                                | `Found sysprep-specialize-script-ps1 in metadata.`         |
+| CLI utility names                             | `gcloud`, `gsutil`, `kubectl`, `bq`                        |
+| Data types                                    | `STRUCT`                                                   |
+| Database elements (rows, columns)             | `month`, `datetime`                                        |
+| Defined (constant) values                     | `"San Francisco"`                                          |
+| DNS record types                              | `AAAA`                                                     |
 | Element names (HTML/XML)                      | `script`, `ClinicalDocument`—no angle brackets around name |
-| Enum names                                    | `BOOL = 1;`                                                  |
-| Environment variable names                    | `CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES`                |
-| Filenames, extensions, paths                  | `pg_hba.conf`, `/etc/postgresql/13/main`                     |
-| Folders and directories                       | `deployments`                                                |
-| HTTP content-type values                      | `application/fhir+json`                                      |
-| HTTP status codes                             | `500 Internal Server Error`                                  |
-| HTTP verbs                                    | `POST`                                                       |
-| IAM role names                                | `roles/cloudfunctions.invoker`                               |
-| IP addresses                                  | `10.10.10.10`                                                |
-| Language keywords                             | `FROM`                                                       |
-| Method and function names                     | `get_job_status`                                             |
-| Namespace aliases                             | `default`                                                    |
-| Placeholder variables                         | `SUBNETWORK_NAME`                                            |
-| Package names                                 | `beautifulsoup4`                                             |
-| Port numbers                                  | `50000`                                                      |
-| Query parameter names/values                  | `recursive=true`                                             |
-| Strings used in commands/code (URLs, domains) | `https://hr.example.com`                                     |
-| Text input                                    | `config-management`                                          |
-| UI elements rendered from prior input         | **`my-sql-cluster1`** (bold + code)                          |
+| Enum names                                    | `BOOL = 1;`                                                |
+| Environment variable names                    | `CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES`              |
+| Filenames, extensions, paths                  | `pg_hba.conf`, `/etc/postgresql/13/main`                   |
+| Folders and directories                       | `deployments`                                              |
+| HTTP content-type values                      | `application/fhir+json`                                    |
+| HTTP status codes                             | `500 Internal Server Error`                                |
+| HTTP verbs                                    | `POST`                                                     |
+| IAM role names                                | `roles/cloudfunctions.invoker`                             |
+| IP addresses                                  | `10.10.10.10`                                              |
+| Language keywords                             | `FROM`                                                     |
+| Method and function names                     | `get_job_status`                                           |
+| Namespace aliases                             | `default`                                                  |
+| Placeholder variables                         | `SUBNETWORK_NAME`                                          |
+| Package names                                 | `beautifulsoup4`                                           |
+| Port numbers                                  | `50000`                                                    |
+| Query parameter names/values                  | `recursive=true`                                           |
+| Strings used in commands/code (URLs, domains) | `https://hr.example.com`                                   |
+| Text input                                    | `config-management`                                        |
+| UI elements rendered from prior input         | **`my-sql-cluster1`** (bold + code)                        |
 
 Don't put quotation marks around code (unless quotes are part of the code).
 
@@ -183,8 +183,8 @@ after the element.
 - Wrap lines at 80 characters (shorter if narrow reading context expected).
 - Mark code blocks as preformatted: `<pre>` in HTML; indent 4 spaces in
   Markdown.
-- Indicate omitted code with a **comment in the language's syntax**—never
-  `...` or `…`. Don't format blocks with omissions as click-to-copy.
+- Indicate omitted code with a **comment in the language's syntax**—never `...`
+  or `…`. Don't format blocks with omissions as click-to-copy.
 
 ```
 apiVersion: serving.knative.dev/v1
@@ -657,8 +657,8 @@ Avoid `[]`, `{}`, `|`, `...` in click-to-copy. Instead:
 | Command name  | e.g., `find`                                              |
 | Argument      | e.g., `/usr/src/linux` (a path)                           |
 | Option        | e.g., `-follow`, `-type f` (hyphen is part of the option) |
-| Metacharacter | `*`, `?`, `^`—for globbing/filename expansion           |
-| Pipe          | `\|`—redirects output to another command                |
+| Metacharacter | `*`, `?`, `^`—for globbing/filename expansion             |
+| Pipe          | `\|`—redirects output to another command                  |
 | Redirection   | `>`, `<`, `<<`, `>>`                                      |
 
 ### Linux signals
