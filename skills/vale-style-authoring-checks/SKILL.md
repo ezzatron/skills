@@ -40,7 +40,7 @@ Flags the **presence** of particular tokens (words, phrases, or regex patterns).
 | `nonword`    | `bool`  | `false` | Removes default `\b` word boundaries.                                     |
 | `exceptions` | `array` | `[]`    | Strings to ignore even if matched.                                        |
 | `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies for this rule.                 |
-| `action`     | `array` | —       | Options for correcting matches (see Vale actions docs).                   |
+| `action`     | `map`   | —       | Options for correcting matches (see Vale actions docs).                   |
 
 `tokens` entries are compiled into `(?i)(?m)\b(?:token1|token2)\b`. Use `raw`
 when you need full regex control; entries are concatenated.
@@ -86,7 +86,7 @@ Associates an **observed** string with a **preferred** replacement.
 | `exceptions` | `array` | `[]`    | Strings to ignore.                                                                         |
 | `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies.                                                |
 | `append`     | `bool`  | `false` | Appends `raw` to end of `tokens`.                                                          |
-| `action`     | `array` | —       | Required when using multiple suggestions (pipe-separated values).                          |
+| `action`     | `map`   | —       | Required when using multiple suggestions (pipe-separated values).                          |
 
 `swap` keys can be regexes (e.g. `'(?:give|gave) rise to': lead to`). Capture
 groups in keys can be referenced in values (`$1`, `$2`, …).
@@ -408,7 +408,7 @@ Spell checking based on **Hunspell-compatible dictionaries**.
 | `dicpath`      | `string` | —            | Directory for `.dic`/`.aff` files. Absolute or relative to `StylesPath`. Can also be set via `DICPATH` env var.  |
 | `custom`       | `bool`   | `false`      | When `true`, disables the built-in filters (see below) so only user-defined `filters` apply.                     |
 | `filters`      | `array`  | _(built-in)_ | Regex patterns for words to ignore during spell checking.                                                        |
-| `ignore`       | `string` | —            | Relative path (from `<StylesPath>/config/ignore`) to a file of words to ignore (one per line, case-insensitive). |
+| `ignore`       | `string \| array` | —            | Path(s) (relative to `<StylesPath>/config/ignore`) to file(s) of words to ignore (one per line, case-insensitive). Accepts a single string or an array of strings. |
 | `vocab`        | `bool`   | `true`       | Set `false` to disable active vocabularies.                                                                      |
 
 ### Built-in filters (active when `custom` is `false`)
