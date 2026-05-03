@@ -410,7 +410,7 @@ Don't use slash-based abbreviations; spell out.
 
 ### Straight apostrophes
 
-Always use **straight** apostrophes (`'`), not curly/typographic (`'`).
+Always use **straight** apostrophes (`'`), not curly/typographic (`’`).
 
 ### Forming possessives
 
@@ -458,7 +458,7 @@ or rewrite.
 
 ### Use straight double quotation marks
 
-Always use straight (`""`), not curly/typographic (`""`), in developer
+Always use straight (`""`), not curly/typographic (`“”`), in developer
 documentation.
 
 **Reasons:** Code requires straight marks; auto-curling tools and humans make
