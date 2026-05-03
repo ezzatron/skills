@@ -222,7 +222,7 @@
     "use_instead": null
   },
   {
-    "term": "API Console, APIs console,\n    developer console, dev console, or Google API Console",
+    "term": "API Console, APIs console, developer console, dev console, or Google API Console",
     "recommendation": "not recommended",
     "details": "Don't use. Instead, refer to the Google APIs Explorer or to the Google Cloud console. For more information, see console.",
     "use_instead": null
@@ -618,7 +618,7 @@
     "use_instead": null
   },
   {
-    "term": "Cloud\n    console",
+    "term": "Cloud console",
     "recommendation": "not recommended",
     "details": "Don't use. Instead, refer to the full name Google Cloud console. If you aren't discussing any other console (such as the Google Admin console), you can abbreviate to the console after first mention. Use the before the tool name. For more information, see console.",
     "use_instead": null
@@ -726,7 +726,7 @@
     "use_instead": null
   },
   {
-    "term": "crazy, bonkers, mad, lunatic, insane,\n    loony",
+    "term": "crazy, bonkers, mad, lunatic, insane, loony",
     "recommendation": "not recommended",
     "details": "Don't use. Instead, use complicated, complex, baffling, strange, or unexpected, and only for inanimate objects.",
     "use_instead": "complicated, complex, baffling, strange, or unexpected, and only for inanimate objects"
@@ -1296,7 +1296,7 @@
     "use_instead": null
   },
   {
-    "term": "gender-neutral he, him, or his (or she or\n    her)",
+    "term": "gender-neutral he, him, or his (or she or her)",
     "recommendation": "not recommended",
     "details": "Don't use. Instead, use the singular they (see Jane Austen and other famous authors violate what everyone learned in their English class). Don't use he/she or (s)he or other such punctuational approaches. For more information, see Pronouns.",
     "use_instead": null
@@ -1392,7 +1392,7 @@
     "use_instead": null
   },
   {
-    "term": "grandfather clause, grand-father clause,\n    grand father clause",
+    "term": "grandfather clause, grand-father clause, grand father clause",
     "recommendation": "not recommended",
     "details": "Don't use. See grandfathered.",
     "use_instead": null
@@ -1422,19 +1422,19 @@
     "use_instead": null
   },
   {
-    "term": "graylist, greylist, gray list, grey list,\n    gray-list, grey-list",
+    "term": "graylist, greylist, gray list, grey list, gray-list, grey-list",
     "recommendation": "not recommended",
     "details": "Don't use. See blacklist.",
     "use_instead": null
   },
   {
-    "term": "graylisted, greylisted, gray listed, grey\n    listed, gray-listed, grey-listed",
+    "term": "graylisted, greylisted, gray listed, grey listed, gray-listed, grey-listed",
     "recommendation": "not recommended",
     "details": "Don't use. See blacklist.",
     "use_instead": null
   },
   {
-    "term": "graylisting, greylisting, gray listing,\n    grey listing, gray-listing, grey-listing",
+    "term": "graylisting, greylisting, gray listing, grey listing, gray-listing, grey-listing",
     "recommendation": "not recommended",
     "details": "Don't use. See blacklist.",
     "use_instead": null
@@ -1794,7 +1794,7 @@
     "use_instead": "the aria-label for that particular icon"
   },
   {
-    "term": "kebab case, kabob case, kebab-case,\n    kabob-case",
+    "term": "kebab case, kabob case, kebab-case, kabob-case",
     "recommendation": "not recommended",
     "details": "Don't use. Instead, use dash-case.",
     "use_instead": "dash-case"
@@ -2280,7 +2280,7 @@
     "use_instead": null
   },
   {
-    "term": "off-the-shelf, commercial off-the-shelf\n    (COTS)",
+    "term": "off-the-shelf, commercial off-the-shelf (COTS)",
     "recommendation": "not recommended",
     "details": "Use more widely understood terms like ready-made, prebuilt, standard, or default.",
     "use_instead": null
@@ -2322,13 +2322,13 @@
     "use_instead": "channel"
   },
   {
-    "term": "outside the box, out of the box,\n    out-of-the-box",
+    "term": "outside the box, out of the box, out-of-the-box",
     "recommendation": "use with care",
     "details": "Avoid using in a figurative way. OK to use literally.",
     "use_instead": null
   },
   {
-    "term": "overview\n    screen",
+    "term": "overview screen",
     "recommendation": "not recommended",
     "details": "In Android documentation, don't use. Instead, use recents screen.",
     "use_instead": "recents screen"
@@ -2412,7 +2412,7 @@
     "use_instead": null
   },
   {
-    "term": "pets versus cattle, pets vs. cattle, pets\n    v. cattle",
+    "term": "pets versus cattle, pets vs. cattle, pets v. cattle",
     "recommendation": "not recommended",
     "details": "Don't use. Instead, use more precise terms like persistent versus dynamic or manually configured versus automated. For more information, see Avoid unnecessarily violent language.",
     "use_instead": "more precise terms like persistent versus dynamic or manually configured versus automated"
@@ -3066,7 +3066,7 @@
     "use_instead": null
   },
   {
-    "term": "tap &\n    hold, tap and hold",
+    "term": "tap & hold, tap and hold",
     "recommendation": "not recommended",
     "details": "In Android documentation, don't use. Instead, use touch & hold. (Not touch and hold.)",
     "use_instead": "touch & hold"
