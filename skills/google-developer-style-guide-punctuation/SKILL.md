@@ -6,7 +6,7 @@ description: >-
   apostrophes, and quotation marks.
 ---
 
-# Google developer documentation style guide — punctuation reference
+# Google developer documentation style guide—punctuation reference
 
 ## Commas
 
@@ -120,21 +120,21 @@ before or after.
 - Input methods: HTML `&mdash;` · macOS `Option+Shift+hyphen` · Windows
   `Alt+0151` (numpad)
 
-### En dashes — don't use
+### En dashes—don't use
 
 Use a hyphen or the word _to_ instead. Never substitute an en dash for an em
 dash.
 
 ### Colons instead of dashes
 
-In description lists, use a colon — not a dash — to separate item from
+In description lists, use a colon—not a dash—to separate item from
 description (see Colons section).
 
 ---
 
 ## Hyphens
 
-Use a hyphen (`-`) when needed for clarity — to avoid misreadings or to combine
+Use a hyphen (`-`) when needed for clarity—to avoid misreadings or to combine
 terms read as a unit.
 
 ### Resolution order for uncertain hyphenation
@@ -148,7 +148,7 @@ terms read as a unit.
 **General rule:** No hyphen between prefix and main noun (_infrastructure,
 megabyte, metadata, preprocessing_).
 
-**Exceptions — add a hyphen when:**
+**Exceptions—add a hyphen when:**
 
 | Condition                            | Examples                                  |
 | ------------------------------------ | ----------------------------------------- |
@@ -231,7 +231,7 @@ Use a hyphen (not en dash) for ranges. Don't mix hyphens with words.
 
 ### Spaces around hyphens
 
-Never space either side — except suspended hyphens (space after, not before).
+Never space either side—except suspended hyphens (space after, not before).
 
 ### Suspended hyphens
 
@@ -268,7 +268,7 @@ URL's last character and the period. Techniques:
 
 ### With quotation marks
 
-Period goes **inside** quotation marks — unless quoting a keyword/literal string
+Period goes **inside** quotation marks—unless quoting a keyword/literal string
 (see Quotation marks section).
 
 - ✅ _...you might say "Fixed typo."_
@@ -332,7 +332,7 @@ Omit ellipses from UI element names unless omission causes confusion. _Save ..._
 ### In text
 
 Don't use in original text. Acceptable **only** in quoted text to replace
-omitted portions — but **never** at the beginning or end of the quote.
+omitted portions—but **never** at the beginning or end of the quote.
 
 | Do                                                                        | Don't                                                                    |
 | ------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -345,7 +345,7 @@ omitted portions — but **never** at the beginning or end of the quote.
 ### Formatting
 
 - Use three actual periods (`...`), not the ellipsis character (`…`).
-- One space before and after — unless a punctuation mark immediately follows
+- One space before and after—unless a punctuation mark immediately follows
   (then no space after).
 
 | Do                                 | Don't                           |
@@ -483,7 +483,7 @@ Commas and periods go **inside** quotation marks.
 | ----------------------------------------------------- | ----------------------------------------------------- |
 | See the section titled "Care and feeding of the emu." | See the section titled "Care and feeding of the emu". |
 
-**Exception — literal/keyword strings:** Put punctuation **outside** quotation
+**Exception—literal/keyword strings:** Put punctuation **outside** quotation
 marks to preserve the exact literal.
 
 | Do                                          | Don't                                       |
