@@ -56,7 +56,7 @@ description: >-
 Do:
 
 ```markdown
-## Migrate VMs to compute engine
+## Migrate VMs to Compute Engine
 
 Migration is not just a single step. The following sections describe the
 recommended steps.
@@ -67,7 +67,7 @@ recommended steps.
 Don't:
 
 ```markdown
-## Migrate VMs to compute engine
+## Migrate VMs to Compute Engine
 
 ### Design the migration
 ```
