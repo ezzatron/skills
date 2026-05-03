@@ -173,7 +173,7 @@ communicating information.**
 
 | Do                          | Don't                                                      |
 | --------------------------- | ---------------------------------------------------------- |
-| In the preceding diagram, … | In the diagram above, …                                    |
+| In the preceding diagram, ... | In the diagram above, ...                                    |
 | Click **Menu**.             | In the left-side panel, click the button with three lines. |
 
 ---
@@ -200,7 +200,7 @@ examples.
 | Do                                                   | Don't                                             |
 | ---------------------------------------------------- | ------------------------------------------------- |
 | Equipment installation takes around 16 person-hours. | Equipment installation takes around 16 man-hours. |
-| …help all of humanity.                               | …help all of mankind.                             |
+| ...help all of humanity.                               | ...help all of mankind.                             |
 
 ## Violent language
 
@@ -250,8 +250,8 @@ If replacing an established term could cause confusion:
 
 | Example                                                                                                   |
 | --------------------------------------------------------------------------------------------------------- |
-| Add them to an allowlist (sometimes called a _whitelist_). Anyone who isn't on the allowlist is blocked … |
-| A Jenkins controller (master) handles HTTP requests. The Jenkins controller is designed to …              |
+| Add them to an allowlist (sometimes called a _whitelist_). Anyone who isn't on the allowlist is blocked ... |
+| A Jenkins controller (master) handles HTTP requests. The Jenkins controller is designed to ...              |
 | Servers are treated as commodities (sometimes described by using the metaphor _cattle, not pets_).        |
 
 When possible, rewrite instead of direct word replacement:
@@ -370,16 +370,16 @@ Replace phrasal/compound verbs with simpler verbs when possible.
 
 | Do                                                                                               | Don't                                                                                |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| If the VM has started and if you're able to connect…                                             | If the VM has started and you're able to connect…                                    |
-| …creates both IAM segmentation and network segmentation…                                         | …creates both IAM and network segmentation…                                          |
-| An egress rule whose action is `allow`, whose destination is `0.0.0.0/0`, and whose priority is… | An egress rule whose action is `allow`, destination is `0.0.0.0/0`, and priority is… |
+| If the VM has started and if you're able to connect...                                             | If the VM has started and you're able to connect...                                    |
+| ...creates both IAM segmentation and network segmentation...                                         | ...creates both IAM and network segmentation...                                          |
+| An egress rule whose action is `allow`, whose destination is `0.0.0.0/0`, and whose priority is... | An egress rule whose action is `allow`, destination is `0.0.0.0/0`, and priority is... |
 
 - Use helper words (_then_, _that_, _of_):
 
 | Do                                                                     | Don't                                                             |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | If the attribute key is not found, then the default value is returned. | If the attribute key is not found, the default value is returned. |
-| …assumes that you have the following knowledge:                        | …assumes you have the following knowledge:                        |
+| ...assumes that you have the following knowledge:                        | ...assumes you have the following knowledge:                        |
 | Identify all of the datasets.                                          | Identify all the datasets.                                        |
 | Start the profiler, and then run the app.                              | Start the profiler, then run the app.                             |
 

@@ -24,7 +24,7 @@ and consistent to aid translation and readers with varying English proficiency.
 - Ableist language or figures of speech
 - Placeholder phrases: _please note_, _at this time_
 - Choppy or long-winded sentences
-- Starting all sentences with the same phrase (_You can …_, _To do …_)
+- Starting all sentences with the same phrase (_You can ..._, _To do ..._)
 - Current pop-culture references
 - Exclamation marks (avoid in general)
 - Mixing metaphors or taking a metaphor too far
@@ -78,7 +78,7 @@ clear who is acting.
 | Reason                                | Example                                                                             |
 | ------------------------------------- | ----------------------------------------------------------------------------------- |
 | Emphasize an object over an action    | The file is saved.                                                                  |
-| De-emphasize a subject / avoid blame  | Over 50 conflicts were found in the file. _(not "You created over 50 conflicts …")_ |
+| De-emphasize a subject / avoid blame  | Over 50 conflicts were found in the file. _(not "You created over 50 conflicts ...")_ |
 | Reader doesn't need to know who acted | The database was purged in January.                                                 |
 
 ---

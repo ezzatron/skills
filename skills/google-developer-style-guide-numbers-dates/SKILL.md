@@ -178,8 +178,8 @@ parts or none.
 ### Dates mid-sentence
 
 - `MONTH DAY, YEAR` mid-sentence: comma after year. ✅
-  `The January 19, 2017, release of …`
-- Month + year only mid-sentence: no comma. ✅ `The January 2017 release of …`
+  `The January 19, 2017, release of ...`
+- Month + year only mid-sentence: no comma. ✅ `The January 2017 release of ...`
 
 ### Avoid numeric-only dates
 
@@ -211,8 +211,8 @@ temperature.
 
 | ✅ Do                                                                        | ❌ Don't                                         |
 | ---------------------------------------------------------------------------- | ------------------------------------------------ |
-| `During warmer months, data centers face a higher risk of cooling failures.` | `During summer months, …`                        |
-| `In November and December, data centers experience higher traffic volume.`   | `In winter, …`                                   |
+| `During warmer months, data centers face a higher risk of cooling failures.` | `During summer months, ...`                        |
+| `In November and December, data centers experience higher traffic volume.`   | `In winter, ...`                                   |
 | `Changes are released in October of each year.`                              | `Changes are released in the Fall of each year.` |
 
 ---

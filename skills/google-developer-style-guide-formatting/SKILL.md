@@ -637,7 +637,7 @@ Avoid `[]`, `{}`, `|`, `...` in click-to-copy. Instead:
   something).
 - Intro phrases: _The output is similar to the following:_ / _The output is the
   following:_
-- Omitted output lines: `...` on a separate line (not `…` ellipsis character).
+- Omitted output lines: `...` on a separate line (not `...` ellipsis character).
 
 ## Command-line terminology
 
