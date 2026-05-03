@@ -56,7 +56,7 @@ Add a comma **only if** the sentence could be misread without one.
 | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Name of the group, which has a maximum length of 200 characters.                | Name of the group which has a maximum length of 200 characters.                |
 | The variable must have a value; otherwise, the server returns an error.         | The variable must have a value otherwise the server returns an error.          |
-| …backend services and backend buckets, because each set of keys is independent… | …backend services and backend buckets because each set of keys is independent… |
+| ...backend services and backend buckets, because each set of keys is independent... | ...backend services and backend buckets because each set of keys is independent... |
 
 ---
 
@@ -75,8 +75,8 @@ The text preceding a colon **must be a complete sentence**.
 Lowercase the first word after a colon (exceptions: see capitalization rules).
 
 - ✅ _Tone: concise, conversational, friendly, respectful_
-- ✅ _…remember to take these steps: review the style guide, use checklists,
-  enlist a fellow writer…_
+- ✅ _...remember to take these steps: review the style guide, use checklists,
+  enlist a fellow writer..._
 
 ### Colons instead of dashes in description lists
 
@@ -100,14 +100,14 @@ Avoid semicolons when possible. Acceptable uses:
      on the opposite side of the planet, reverse the order._
 2. **Before a conjunctive adverb** (_therefore, that is_) joining two
    independent clauses.
-   - ✅ _…places the head-tracked node below the Main Camera; therefore, only
+   - ✅ _...places the head-tracked node below the Main Camera; therefore, only
      the stereo cameras are affected._
    - ✅ _The URL from which a video ad loads; that is, the URL to use to fetch
      that video ad._
 3. **Separating long/complex series items** that contain their own punctuation.
-   - ✅ _…focus on: what matters most to your users; what is most important to
+   - ✅ _...focus on: what matters most to your users; what is most important to
      fix; and what is easy or feasible to fix._
-   - ✅ _…checking for the following: present tense and active voice; typos,
+   - ✅ _...checking for the following: present tense and active voice; typos,
      punctuation, and grammar; and whether you can shorten anything._
 
 ---
@@ -264,14 +264,14 @@ URL's last character and the period. Techniques:
 
 | Do                                              | Don't                                           |
 | ----------------------------------------------- | ----------------------------------------------- |
-| …Privacy Policy:<br>http://example.com/privacy/ | …Privacy Policy at http://example.com/privacy/. |
+| ...Privacy Policy:<br>http://example.com/privacy/ | ...Privacy Policy at http://example.com/privacy/. |
 
 ### With quotation marks
 
 Period goes **inside** quotation marks — unless quoting a keyword/literal string
 (see Quotation marks section).
 
-- ✅ _…you might say "Fixed typo."_
+- ✅ _...you might say "Fixed typo."_
 - If quoted material ends with `?` or `!`, omit the period: _Children always ask
   "Why?"_
 
@@ -282,7 +282,7 @@ Period goes **inside** quotation marks — unless quoting a keyword/literal stri
 | Parenthetical at end of sentence                   | Period **after** closing paren.  |
 | Parentheses enclose a complete standalone sentence | Period **inside** closing paren. |
 
-- ✅ _…(even if that change occurs while your application isn't running)._
+- ✅ _...(even if that change occurs while your application isn't running)._
 - ✅ _(With App Engine, there are no servers for you to maintain.)_
 
 ### Headings
@@ -369,7 +369,7 @@ Don't use slashes to separate alternatives; spell out _and_ / _or_.
 
 | Do                                  | Don't                       |
 | ----------------------------------- | --------------------------- |
-| …developed and is hosted by…        | …developed/hosted by…       |
+| ...developed and is hosted by...        | ...developed/hosted by...       |
 | Call this method five or six times. | Call this method 5/6 times. |
 
 ### _And/or_
@@ -380,7 +380,7 @@ tables).
 | Do                                      | Don't                                   |
 | --------------------------------------- | --------------------------------------- |
 | You can view and edit your own data.    | You can view and/or edit your own data. |
-| …raw events, processed events, or both. | …raw and/or processed events.           |
+| ...raw events, processed events, or both. | ...raw and/or processed events.           |
 
 ### File paths and URLs
 
@@ -436,8 +436,8 @@ function/performance. Use the name as a modifier or rewrite with _of_.
 
 | Do                                         | Don't                                 |
 | ------------------------------------------ | ------------------------------------- |
-| …monitor Google Search performance.        | …monitor Google Search's performance. |
-| …monitor the performance of Google Search. | —                                     |
+| ...monitor Google Search performance.        | ...monitor Google Search's performance. |
+| ...monitor the performance of Google Search. | —                                     |
 
 Company name possessives are OK for non-trademark uses: _Google's new office is
 nearby._
@@ -468,9 +468,9 @@ mistakes; hard to proofread; difficult to type on some platforms.
 
 | Use case                                                  | Example                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------- |
-| Title of shorter work (article, episode) not linked       | …described in the section "Deploying containers" of the video. |
-| Title of parent doc when linking to a subsection          | The [ML workflow section](...) of "Introduction to Vertex AI"… |
-| Direct quotation / slogan                                 | Martin Fowler has said, "We are still learning…"               |
+| Title of shorter work (article, episode) not linked       | ...described in the section "Deploying containers" of the video. |
+| Title of parent doc when linking to a subsection          | The [ML workflow section](...) of "Introduction to Vertex AI"... |
+| Direct quotation / slogan                                 | Martin Fowler has said, "We are still learning..."               |
 | Metaphorical use of a term (not established domain usage) | This forms an "island" within the network.                     |
 
 Full-length work titles: use _italics_, not quotation marks.
@@ -502,4 +502,4 @@ Use **only** for:
 
 | Do                                                 | Don't                                              |
 | -------------------------------------------------- | -------------------------------------------------- |
-| She said, "I heard him shout 'Help,' and saw him…" | She said, 'I heard him shout "Help", and saw him…' |
+| She said, "I heard him shout 'Help,' and saw him..." | She said, 'I heard him shout "Help", and saw him...' |
