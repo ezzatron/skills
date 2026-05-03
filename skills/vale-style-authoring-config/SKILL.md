@@ -22,7 +22,7 @@ Packages = Google, write-good
 Vocab = Base
 
 [formats]
-# Format associations
+# Fall back to Markdown when mdx2vast is not installed
 mdx = md
 
 [*]
@@ -152,8 +152,8 @@ The `[formats]` section maps unknown file extensions to supported ones
 
 ```ini
 [formats]
-mdx = md
-rst = md
+mdx = md    # Fall back to Markdown when mdx2vast is not installed
+mdtext = md # Treat .mdtext files as Markdown
 ```
 
 ## Format-specific settings
@@ -224,7 +224,7 @@ like MDX that don't support HTML comments.
 
 ```ini
 [formats]
-mdx = md
+mdx = md  # Fall back to Markdown when mdx2vast is not installed
 
 [*.mdx]
 BasedOnStyles = Vale
