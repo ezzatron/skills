@@ -79,9 +79,9 @@ Don't use "this section" or "these sections" (ambiguous).
 
 ---
 
-# Lists
+## Lists
 
-## List vs. table decision
+### List vs. table decision
 
 | Item structure                           | Presentation                         |
 | ---------------------------------------- | ------------------------------------ |
@@ -91,7 +91,7 @@ Don't use "this section" or "these sections" (ambiguous).
 
 - Don't use a list for a single item.
 
-## List types
+### List types
 
 | Type                          | Use for                                      | HTML             |
 | ----------------------------- | -------------------------------------------- | ---------------- |
@@ -102,7 +102,7 @@ Don't use "this section" or "these sections" (ambiguous).
 
 - Nested sequential sub-lists: lowercase letters → lowercase Roman numerals.
 
-## Introductory sentences
+### Introductory sentences
 
 - Precede a list with a **complete introductory sentence** (not a partial
   sentence completed by list items).
@@ -129,17 +129,17 @@ Use the **Submit** button to:
 
 - An objectives list under an `#### Objectives` heading needs no intro sentence.
 
-## Multiple paragraph list items
+### Multiple paragraph list items
 
 - Use `<p>` elements, not `<br>`, for multiple paragraphs within a list item.
 
-## Parallel syntax
+### Parallel syntax
 
 - Use the same grammatical structure for all items in a given list.
 
-## Capitalization and end punctuation
+### Capitalization and end punctuation
 
-### Numbered, lettered, and bulleted lists
+#### Numbered, lettered, and bulleted lists
 
 - **Start** each item with a capital letter (unless case is meaningful, e.g.,
   glossary terms).
@@ -151,13 +151,13 @@ Use the **Submit** button to:
 - If punctuation becomes inconsistent, rewrite for parallel construction or add
   periods to all items.
 
-### Description lists (`dl`)
+#### Description lists (`dl`)
 
 - Start each `dt` (term) with a capital letter. Don't end the term with a
   period.
 - End each `dd` (description) with a period.
 
-### Run-in heading lists
+#### Run-in heading lists
 
 - Start run-in heading with a capital letter.
 - End run-in heading with a **period** or **colon** (be consistent within the
@@ -182,12 +182,12 @@ Do:
 - **It increases fuel economy by reducing baggage weight**. By charging astronomical prices...
 ```
 
-## Unusual list numbering
+### Unusual list numbering
 
 - Reverse order: `<ol reversed>`.
 - Manual value: `value` attribute (avoid in most cases).
 
-## Comma-separated (inline) lists
+### Comma-separated (inline) lists
 
 - Use serial commas.
 - Don't end with _etc._ or _and so on_; instead introduce the list as
@@ -201,14 +201,14 @@ Don't:
 
 ---
 
-# Tables
+## Tables
 
-## When to use tables
+### When to use tables
 
 - Use tables for items with **≥ 3 pieces of related data** per item.
 - Use lists for single-unit items or term/definition pairs.
 
-### Don't use tables for
+#### Don't use tables for
 
 - Page layout (use CSS).
 - A single row (usually; reference docs may be exceptions).
@@ -217,11 +217,11 @@ Don't:
 - Long one-dimensional lists split into columns.
 - In the middle of a numbered procedure.
 
-## Multi-paragraph table cells
+### Multi-paragraph table cells
 
 - Use `<p>` elements, not `<br>`.
 
-## Introductory sentences
+### Introductory sentences
 
 - Introduce every table with a **complete sentence** describing its purpose
   (screen readers don't pre-announce tables).
@@ -231,14 +231,14 @@ Don't:
 Do:
 `Change the environment variables to values for your deployment, as listed in the following table:`
 
-## Table placement
+### Table placement
 
 - Refer to position with phrases like _the following table_ or _the preceding
   table_.
 - Don't put a table in the middle of a sentence.
 - Place footnotes immediately after the table; avoid footnotes when possible.
 
-## Table captions
+### Table captions
 
 - **One table in doc**: no caption needed (place adjacent to referring text).
 - **Multiple tables**: use `<caption>` as first child of `<table>`. Format:
@@ -246,7 +246,7 @@ Do:
 - Refer by number in text (e.g., _as shown in table 2_). Don't capitalize
   _table_ unless it starts a sentence.
 
-## Table formatting
+### Table formatting
 
 - Don't add inline styling to `<table>`.
 - Use `<th>` for header cells (not visual styling alone).
@@ -256,7 +256,7 @@ Do:
 - Don't convey information through images/symbols alone; always include `alt`
   text.
 
-## Table column heads
+### Table column heads
 
 - Sentence case.
 - Concise.
@@ -264,19 +264,19 @@ Do:
 - Use `<th>` for first column and first row only.
 - Include `scope` attribute for accessibility.
 
-## Responsive tables
+### Responsive tables
 
 - Use CSS that adapts to different viewport sizes.
 
-## Linking to tables
+### Linking to tables
 
 - Prefer referring by table number over linking directly.
 
 ---
 
-# Procedures
+## Procedures
 
-## Introductory sentences
+### Introductory sentences
 
 - Introduce with a sentence providing context beyond the heading. Don't repeat
   the heading.
@@ -289,7 +289,7 @@ Do: `To customize the buttons, follow these steps:` Do: `Customize the buttons:`
 Do: `To customize the buttons, do the following:` Don't:
 `To customize the buttons:`
 
-## Single-step procedures
+### Single-step procedures
 
 - Format as a **bulleted list item** (not a numbered step).
 
@@ -305,13 +305,13 @@ Don't:
 1. Click **Clear logcat**.
 ```
 
-## Sub-steps
+### Sub-steps
 
 - Sub-steps: lowercase letters.
 - Sub-sub-steps: lowercase Roman numerals.
 - End the parent step with a colon or period (treat as intro sentence).
 
-## Order within a complex step
+### Order within a complex step
 
 1. Action description
 2. Command (if needed)
@@ -320,29 +320,29 @@ Don't:
 5. Command output (if needed)
 6. Result explanation (separate paragraph)
 
-## Multi-action steps
+### Multi-action steps
 
 - One action per step (general rule).
 - OK to combine sequential menu clicks with `>`:
   `Click **File > New > Document**.`
 - Split steps that feel too long.
 
-## Multiple procedures for same task
+### Multiple procedures for same task
 
 - Document **one** procedure (most accessible, shortest, simplest).
 - If multiple ways are needed, separate into different pages, headings, or tabs.
 - Prefer: keyboard-accessible, shortest, most familiar language.
 
-## Repetitive procedures
+### Repetitive procedures
 
 - Don't repeat procedures; reference and link to them.
 
-## Optional steps
+### Optional steps
 
 Do: `1. Optional: Type an arbitrary string...` Don't:
 `1. (Optional) Type an arbitrary string...`
 
-## Location before action
+### Location before action
 
 - State **where** before **what**.
 
@@ -351,7 +351,7 @@ Do: `In Google Docs, click **File > New > Document**.` Don't:
 
 - Restate location context in each procedure section if split across headings.
 
-## Goal before action
+### Goal before action
 
 - State the **purpose** before the **action**.
 
@@ -361,7 +361,7 @@ Do: `To start a new document, click **File > New > Document**.` Don't:
 - If "To ..." phrasing makes a required step sound optional, use colon format:
   `Sort the data by date: click **Column > Sort**.`
 
-## Results and justifications
+### Results and justifications
 
 - State action first, result second, in the same paragraph.
 - Avoid repeating UI element names across consecutive steps.
@@ -383,7 +383,7 @@ Don't:
 - Justifications: action first, justification second. E.g.,
   `Store the private key in a secure location. You need it later.`
 
-## Summary of procedure guidelines
+### Summary of procedure guidelines
 
 | Rule                                   | Do                                                             | Don't                                                                   |
 | -------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -402,9 +402,9 @@ Don't:
 
 ---
 
-# Notices (notes, cautions, warnings)
+## Notices (notes, cautions, warnings)
 
-## Notice types
+### Notice types
 
 | Type        | Severity | Use for                                                                                     |
 | ----------- | -------- | ------------------------------------------------------------------------------------------- |
@@ -413,14 +413,14 @@ Don't:
 | **Warning** | High     | "Don't do this" or irreversible action (data loss, security breach, monetary loss).         |
 | **Success** | N/A      | Successful action confirmation. **Interactive/dynamic content only**; not for static pages. |
 
-## General rules
+### General rules
 
 - Don't overuse notices; they lose visual distinctiveness.
 - Avoid grouping two or more notices together; reorganize content instead.
 - If unsure whether something should be a notice, write it as regular text
   first.
 
-## When to use a note
+### When to use a note
 
 All must be true:
 
@@ -429,7 +429,7 @@ All must be true:
   path).
 - Information is **not in the flow** of the text.
 
-## When NOT to use a note
+### When NOT to use a note
 
 - Don't use for cross-references.
 - Don't use for prerequisites or prior steps.
@@ -438,7 +438,7 @@ All must be true:
 - Don't use for information that's in-flow with preceding text (expected
   results, continuations).
 
-## HTML example
+### HTML example
 
 ```html
 <aside class="note">
@@ -448,9 +448,9 @@ All must be true:
 
 ---
 
-# Cross-references and linking
+## Cross-references and linking
 
-## Selective linking
+### Selective linking
 
 - Each link adds cognitive load and a chance to leave the page.
 - Provide help in context when possible (define terms, explain concepts, give
@@ -465,7 +465,7 @@ All must be true:
 - OK to link to third-party sites for standards/software rather than
   re-documenting them.
 
-## Descriptive link text
+### Descriptive link text
 
 - Use **short, unique, descriptive phrases** as link text.
 - Two options:
@@ -478,44 +478,44 @@ All must be true:
 Do: `For more information, see [Load balancing and scaling](...).` Don't:
 `See [this blog post](...).`
 
-### Avoid vague link text
+#### Avoid vague link text
 
 Don't: _this document_, _this article_, _click here_.
 
 Do: `see [Make headings into link targets](...)` Don't:
 `Want more? [Click here!](...)`
 
-### Avoid URLs as link text
+#### Avoid URLs as link text
 
 Use page title or description instead. **Exception**: some legal documents
 (e.g., Terms of Service).
 
-### Abbreviations in link text
+#### Abbreviations in link text
 
 Include long form and abbreviation together inside the link.
 
 Do: `[Google Kubernetes Engine (GKE)](...)` Don't:
 `[Google Kubernetes Engine](...) (GKE)`
 
-### Link to commands
+#### Link to commands
 
 Include the description with the code element in the link text.
 
 Do: `the [--hostname flag](...)` Don't: `the [--hostname](...) flag`
 
-## Link introductions
+### Link introductions
 
 - Standard phrasing: **"For more information, see ..."** or **"For more
   information about ..., see ..."**
 - Use "about" clause when link text doesn't clearly indicate why you're linking.
 - Use _see_ (not other verbs). Don't use _on_ instead of _about_.
 
-## Clarify link purpose
+### Clarify link purpose
 
 - Make surrounding context or link text clearly indicate **why** you're linking.
 - Add an "about..." phrase if needed.
 
-## Unexpected link behavior
+### Unexpected link behavior
 
 - **File downloads / email links**: state in link text; mention file type. E.g.,
   `download the security features PDF`.
@@ -527,7 +527,7 @@ Do: `the [--hostname flag](...)` Don't: `the [--hostname](...) flag`
 - **Different domain**: don't use external link icons. Mention in text if
   important.
 
-## Link formatting
+### Link formatting
 
 - Put punctuation **outside** link tags.
 - Don't put link text in quotation marks.
@@ -535,13 +535,13 @@ Do: `the [--hostname flag](...)` Don't: `the [--hostname](...) flag`
   - Section/short work → quotation marks: `"Describing system versions"`
   - Full-length work (book, movie) → italics: `_The Chicago Manual of Style_`
 
-## Navigation links
+### Navigation links
 
 - Don't link outside the documentation set from navigation (e.g., table of
   contents).
 - If necessary, make it clear the reader is leaving the doc set.
 
-## Link styling (CSS)
+### Link styling (CSS)
 
 - Contrast link text color from regular text.
 - Underline links; don't underline non-links.
@@ -549,9 +549,9 @@ Do: `the [--hostname flag](...)` Don't: `the [--hostname](...) flag`
 
 ---
 
-# Example domains and names
+## Example domains and names
 
-## Domains
+### Domains
 
 - Use **`example.com`**, **`example.org`**, **`example.net`** (IANA-reserved).
 - Google-owned doc domains: `altostrat.com`, `examplepetstore.com`,
@@ -560,13 +560,13 @@ Do: `the [--hostname flag](...)` Don't: `the [--hostname](...) flag`
 - For internationalized domain names: use
   [IDN Test TLDs](https://en.wikipedia.org/wiki/IDN_Test_TLDs).
 
-## Email addresses
+### Email addresses
 
 - Combine a doc domain + an approved person name: `dana@example.com`.
 - Generic addresses OK: `support@example.net`.
 - Don't use product names or made-up names.
 
-## Person names
+### Person names
 
 Approved given names (gender-neutral): Alex, Amal, Ariel, Bola, Charlie, Cruz,
 Dana, Dani, Hao, Ira, Izumi, Jie, Kai, Kalani, Kim, Kiran, Lee, Lucian, Luka,
@@ -579,32 +579,32 @@ Mahan, Noam, Nur, Quinn, Raha, Rosario, Sasha, Tal, Taylor, Tristan, Yuri.
 - Don't use Alice and Bob unless the doc references a spec that uses them; if
   so, use only characters from that cast.
 
-## Company names
+### Company names
 
 - Use **Example Organization**.
 - To differentiate: _Enterprise Example Organization_, _Startup Example
   Organization_.
 
-## Phone numbers
+### Phone numbers
 
 - Use US range **`800-555-0100`** through **`800-555-0199`** (reserved for
   fiction/examples).
 - Never use real phone numbers.
 
-## IP addresses
+### IP addresses
 
-### IPv4 (RFC 5737)
+#### IPv4 (RFC 5737)
 
 - `192.0.2.0`–`192.0.2.255` (`192.0.2.0/24`)
 - `198.51.100.0`–`198.51.100.255` (`198.51.100.0/24`)
 - `203.0.113.0`–`203.0.113.255` (`203.0.113.0/24`)
 
-### IPv6 (RFC 3849)
+#### IPv6 (RFC 3849)
 
 - `2001:db8::` through `2001:db8:ffff:ffff:ffff:ffff:ffff:ffff`
 - Range: `2001:db8::/32`
 
-## Street addresses
+### Street addresses
 
 Use fictional addresses:
 
@@ -612,21 +612,21 @@ Use fictional addresses:
 - `Avenida da Pastelaria, 1903, Lisbon, 1229-076`
 - `8 Rue du Nom Fictif, 341 Paris`
 
-## Project names
+### Project names
 
 - Use meaningful/descriptive names. Don't use `foo`, `bar`, `baz`.
 - Numbering scheme when needed: `staging`, `frontend-development`,
   `production-1`.
 
-## Service account IDs
+### Service account IDs
 
 - Use `123456789012345678901` as the example numeric ID.
 
 ---
 
-# Prescriptive documentation
+## Prescriptive documentation
 
-## Core principle
+### Core principle
 
 - **Prescriptive** (opinionated) documentation **recommends a way** to
   accomplish tasks.
@@ -635,7 +635,7 @@ Use fictional addresses:
 - Scenarios/procedures reflect the most likely use cases.
 - Commands/arguments serve the most common use case.
 
-## Word choice for recommendations and requirements
+### Word choice for recommendations and requirements
 
 **Avoid `should`** — it creates ambiguity (recommended but optional?).
 
