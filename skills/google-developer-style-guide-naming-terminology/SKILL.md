@@ -267,7 +267,7 @@ Before using, apply the following decision framework:
    > known as _shifting left_).
    >
    > **Do:** A
-   > [split-brain](<https://en.wikipedia.org/wiki/Split-brain_(computing)>)
+   > [split-brain](https://en.wikipedia.org/wiki/Split-brain_%28computing%29)
    > situation can develop.
 
 4. **Used throughout the document?** Briefly describe in parentheses on first
