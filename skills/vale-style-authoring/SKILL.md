@@ -73,10 +73,11 @@ scope: heading
 action:
   name: edit
   params:
-    - remove
-    - ".?!"
+    - regex
+    - '[.?!]'
+    - ''
 tokens:
-  - '[a-z0-9][.?!](?:\s|$)'
+  - '[a-z0-9][.?!](?=\s|$)'
 ```
 
 ## Checks (extension points)
