@@ -80,16 +80,17 @@ tokens:
 
 ```yaml
 extends: existence
-message: Consider removing '%s'
+message: "'%s' should be '%s'."
 level: warning
 action:
   name: edit
   params:
     - regex
-    - '([A-Z]\w+)([A-Z]\w+)'
-    - "$1-$2"
+    - '([a-z])([A-Z])'
+    - '$1-$2'
+nonword: true
 tokens:
-  - '([A-Z]\w+)([A-Z]\w+)'
+  - '[A-Z][a-zA-Z]*[A-Z][a-zA-Z]*'
 ```
 
 #### trim_right: remove trailing exclamation mark
