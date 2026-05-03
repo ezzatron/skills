@@ -69,8 +69,9 @@ action:
   name: edit
   params:
     - regex
-    - '(\w+)_(\w+)'
-    - "$1-$2"
+    - '_'
+    - '-'
+nonword: true
 tokens:
   - '\w+_\w+'
 ```
@@ -232,9 +233,10 @@ Script (`<StylesPath>/config/actions/CamelToSnake.tengo`):
 text := import("text")
 
 // `match` is provided by Vale and represents the rule's matched text.
-made := text.re_replace(`([A-Z]\w+)([A-Z]\w+)`, match, `$1-$2`)
-
-made = text.replace(made, "-", "_", 1)
+// Insert underscore before each uppercase letter that follows a lowercase letter.
+made := text.re_replace(`([a-z])([A-Z])`, match, `${1}_${2}`)
+// Insert underscore between consecutive uppercase and an uppercase+lowercase pair.
+made = text.re_replace(`([A-Z]+)([A-Z][a-z])`, made, `${1}_${2}`)
 made = text.to_lower(made)
 
 // `suggestions` is required by Vale and represents the script's output.
