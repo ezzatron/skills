@@ -419,7 +419,7 @@ Spell checking based on **Hunspell-compatible dictionaries**.
 | `[^a-zA-Z_']`             | Words containing non-word tokens (numbers, etc.). |
 | `[A-Z]+$`                 | Fully upper-cased words.                          |
 
-Default dictionary: open-source American English (`en_US-web`).
+Default dictionary: open-source American English (`en_US`).
 
 ### Example (defaults)
 
