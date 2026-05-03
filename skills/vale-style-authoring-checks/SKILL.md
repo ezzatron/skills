@@ -1,6 +1,9 @@
 ---
 name: vale-style-authoring-checks
-description: "Complete reference for all Vale check types (extensions): existence, substitution, occurrence, repetition, consistency, conditional, capitalization, metric, spelling, sequence, and script"
+description:
+  "Complete reference for all Vale check types (extensions): existence,
+  substitution, occurrence, repetition, consistency, conditional,
+  capitalization, metric, spelling, sequence, and script"
 ---
 
 # Vale check types reference
@@ -12,33 +15,32 @@ covers all 11 check types, their keys, and complete examples.
 
 These keys are available on every check type (not repeated per-type below):
 
-| Key | Type | Description |
-| --- | --- | --- |
-| `extends` | `string` | **Required.** The check type name. |
-| `message` | `string` | Alert message. Use `%s` for match interpolation. |
-| `level` | `string` | `suggestion`, `warning`, or `error`. |
-| `scope` | `string` | The scope to lint (e.g. `heading`, `sentence`, `text`, `raw`, `paragraph`). |
-| `link` | `string` | URL for additional context shown with the alert. |
+| Key       | Type     | Description                                                                 |
+| --------- | -------- | --------------------------------------------------------------------------- |
+| `extends` | `string` | **Required.** The check type name.                                          |
+| `message` | `string` | Alert message. Use `%s` for match interpolation.                            |
+| `level`   | `string` | `suggestion`, `warning`, or `error`.                                        |
+| `scope`   | `string` | The scope to lint (e.g. `heading`, `sentence`, `text`, `raw`, `paragraph`). |
+| `link`    | `string` | URL for additional context shown with the alert.                            |
 
 ---
 
 ## Existence
 
-Flags the **presence** of particular tokens (words, phrases, or regex
-patterns).
+Flags the **presence** of particular tokens (words, phrases, or regex patterns).
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `tokens` | `array` | — | Strings/regexes compiled into a word-bounded non-capturing group. |
-| `raw` | `array` | — | Raw regex fragments concatenated as-is (no word boundaries). |
-| `append` | `bool` | `false` | When `true`, appends `raw` to the end of `tokens` (both must be defined). |
-| `ignorecase` | `bool` | `false` | Case-insensitive matching. |
-| `nonword` | `bool` | `false` | Removes default `\b` word boundaries. |
-| `exceptions` | `array` | `[]` | Strings to ignore even if matched. |
-| `vocab` | `bool` | `true` | Set `false` to disable active vocabularies for this rule. |
-| `action` | `array` | — | Options for correcting matches (see Vale actions docs). |
+| Key          | Type    | Default | Description                                                               |
+| ------------ | ------- | ------- | ------------------------------------------------------------------------- |
+| `tokens`     | `array` | —       | Strings/regexes compiled into a word-bounded non-capturing group.         |
+| `raw`        | `array` | —       | Raw regex fragments concatenated as-is (no word boundaries).              |
+| `append`     | `bool`  | `false` | When `true`, appends `raw` to the end of `tokens` (both must be defined). |
+| `ignorecase` | `bool`  | `false` | Case-insensitive matching.                                                |
+| `nonword`    | `bool`  | `false` | Removes default `\b` word boundaries.                                     |
+| `exceptions` | `array` | `[]`    | Strings to ignore even if matched.                                        |
+| `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies for this rule.                 |
+| `action`     | `array` | —       | Options for correcting matches (see Vale actions docs).                   |
 
 `tokens` entries are compiled into `(?i)(?m)\b(?:token1|token2)\b`. Use `raw`
 when you need full regex control; entries are concatenated.
@@ -75,16 +77,16 @@ Associates an **observed** string with a **preferred** replacement.
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `swap` | `map` | — | `observed: expected` pairs. Keys may be regex; values may reference capture groups (`$1`). |
-| `ignorecase` | `bool` | `false` | Case-insensitive matching. |
-| `nonword` | `bool` | `false` | Removes default `\b` word boundaries. |
-| `capitalize` | `bool` | `false` | Matches the capitalization of the source token. |
-| `exceptions` | `array` | `[]` | Strings to ignore. |
-| `vocab` | `bool` | `true` | Set `false` to disable active vocabularies. |
-| `append` | `bool` | `false` | Appends `raw` to end of `tokens`. |
-| `action` | `array` | — | Required when using multiple suggestions (pipe-separated values). |
+| Key          | Type    | Default | Description                                                                                |
+| ------------ | ------- | ------- | ------------------------------------------------------------------------------------------ |
+| `swap`       | `map`   | —       | `observed: expected` pairs. Keys may be regex; values may reference capture groups (`$1`). |
+| `ignorecase` | `bool`  | `false` | Case-insensitive matching.                                                                 |
+| `nonword`    | `bool`  | `false` | Removes default `\b` word boundaries.                                                      |
+| `capitalize` | `bool`  | `false` | Matches the capitalization of the source token.                                            |
+| `exceptions` | `array` | `[]`    | Strings to ignore.                                                                         |
+| `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies.                                                |
+| `append`     | `bool`  | `false` | Appends `raw` to end of `tokens`.                                                          |
+| `action`     | `array` | —       | Required when using multiple suggestions (pipe-separated values).                          |
 
 `swap` keys can be regexes (e.g. `'(?:give|gave) rise to': lead to`). Capture
 groups in keys can be referenced in values (`$1`, `$2`, …).
@@ -115,8 +117,8 @@ extends: substitution
 message: "Consider using '%s' instead of '%s'"
 level: warning
 swap:
-  '(?:give|gave) rise to': lead to
-  'within the (.*)?directory': in the $1 directory
+  "(?:give|gave) rise to": lead to
+  "within the (.*)?directory": in the $1 directory
 ```
 
 ### Example with multiple suggestions
@@ -139,11 +141,11 @@ Enforces a **minimum or maximum count** of a token within a scope.
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `token` | `string` | — | The token (string/regex) to count. |
-| `max` | `int` | — | Maximum allowed occurrences. |
-| `min` | `int` | — | Minimum required occurrences. |
+| Key     | Type     | Default | Description                        |
+| ------- | -------- | ------- | ---------------------------------- |
+| `token` | `string` | —       | The token (string/regex) to count. |
+| `max`   | `int`    | —       | Maximum allowed occurrences.       |
+| `min`   | `int`    | —       | Minimum required occurrences.      |
 
 `message` supports one `%s` placeholder replaced with the occurrence count.
 
@@ -155,7 +157,7 @@ message: "More than 3 commas!"
 level: error
 scope: sentence
 max: 3
-token: ','
+token: ","
 ```
 
 ### Example with message interpolation
@@ -166,7 +168,7 @@ message: "Titles should use fewer than 70 characters (found: %s)."
 level: warning
 scope: heading
 max: 70
-token: '.'
+token: "."
 ```
 
 ---
@@ -177,18 +179,18 @@ Flags **repeated consecutive occurrences** of its tokens (e.g. "the the").
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `tokens` | `array` | — | Strings/regexes transformed into a non-capturing group. |
-| `ignorecase` | `bool` | `false` | Case-insensitive matching. |
-| `alpha` | `bool` | `false` | Limits matches to alphanumeric tokens. |
-| `exceptions` | `array` | `[]` | Strings to ignore. |
-| `vocab` | `bool` | `true` | Set `false` to disable active vocabularies. |
+| Key          | Type    | Default | Description                                             |
+| ------------ | ------- | ------- | ------------------------------------------------------- |
+| `tokens`     | `array` | —       | Strings/regexes transformed into a non-capturing group. |
+| `ignorecase` | `bool`  | `false` | Case-insensitive matching.                              |
+| `alpha`      | `bool`  | `false` | Limits matches to alphanumeric tokens.                  |
+| `exceptions` | `array` | `[]`    | Strings to ignore.                                      |
+| `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies.             |
 
 `message` supports one `%s` placeholder replaced with the repeated token.
 
-Vale includes a built-in `Vale.Repetition` rule that catches repeated words
-even across markup boundaries.
+Vale includes a built-in `Vale.Repetition` rule that catches repeated words even
+across markup boundaries.
 
 ### Example
 
@@ -198,23 +200,23 @@ message: "'%s' is repeated!"
 level: error
 alpha: true
 tokens:
-  - '[^s.!?]+'
+  - "[^s.!?]+"
 ```
 
 ---
 
 ## Consistency
 
-Ensures that only **one** of two variant spellings/forms appears in the
-document (e.g. "advisor" vs "adviser").
+Ensures that only **one** of two variant spellings/forms appears in the document
+(e.g. "advisor" vs "adviser").
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `either` | `map` | — | `option_a: option_b` pairs; only one of each pair may appear. |
-| `ignorecase` | `bool` | `false` | Case-insensitive matching. |
-| `nonword` | `bool` | `false` | Removes default `\b` word boundaries. |
+| Key          | Type   | Default | Description                                                   |
+| ------------ | ------ | ------- | ------------------------------------------------------------- |
+| `either`     | `map`  | —       | `option_a: option_b` pairs; only one of each pair may appear. |
+| `ignorecase` | `bool` | `false` | Case-insensitive matching.                                    |
+| `nonword`    | `bool` | `false` | Removes default `\b` word boundaries.                         |
 
 `message` supports one `%s` placeholder replaced with the inconsistent term.
 
@@ -240,13 +242,13 @@ existence of `second`."
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `first` | `string` | — | Regex for the antecedent (the thing that triggers the check). |
-| `second` | `string` | — | Regex for the consequent (the thing that must also be present). |
-| `ignorecase` | `bool` | `false` | Case-insensitive matching. |
-| `exceptions` | `array` | `[]` | Tokens that won't be flagged. |
-| `vocab` | `bool` | `true` | Set `false` to disable active vocabularies. |
+| Key          | Type     | Default | Description                                                     |
+| ------------ | -------- | ------- | --------------------------------------------------------------- |
+| `first`      | `string` | —       | Regex for the antecedent (the thing that triggers the check).   |
+| `second`     | `string` | —       | Regex for the consequent (the thing that must also be present). |
+| `ignorecase` | `bool`   | `false` | Case-insensitive matching.                                      |
+| `exceptions` | `array`  | `[]`    | Tokens that won't be flagged.                                   |
+| `vocab`      | `bool`   | `true`  | Set `false` to disable active vocabularies.                     |
 
 Capture groups in `first` and `second` are compared. Regex lookarounds can
 restrict what is captured for more complex conditional logic.
@@ -287,24 +289,24 @@ Checks that text in the specified scope matches a **case style**.
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `match` | `string` | — | One of `$title`, `$sentence`, `$lower`, `$upper`, or a custom regex pattern. |
-| `style` | `string` | `AP` | `AP` or `Chicago`. Only applies when `match` is `$title`. |
-| `exceptions` | `array` | `[]` | Strings to ignore during checking. |
-| `indicators` | `array` | `[]` | Suffixes that indicate the next token should be ignored. |
-| `threshold` | `float` | `0.8` | Minimum proportion of words that must match the case for the sentence to pass. |
-| `prefix` | `string` | — | Regex for a constant prefix to ignore during case conversion. |
-| `vocab` | `bool` | `true` | Set `false` to disable active vocabularies. |
+| Key          | Type     | Default | Description                                                                    |
+| ------------ | -------- | ------- | ------------------------------------------------------------------------------ |
+| `match`      | `string` | —       | One of `$title`, `$sentence`, `$lower`, `$upper`, or a custom regex pattern.   |
+| `style`      | `string` | `AP`    | `AP` or `Chicago`. Only applies when `match` is `$title`.                      |
+| `exceptions` | `array`  | `[]`    | Strings to ignore during checking.                                             |
+| `indicators` | `array`  | `[]`    | Suffixes that indicate the next token should be ignored.                       |
+| `threshold`  | `float`  | `0.8`   | Minimum proportion of words that must match the case for the sentence to pass. |
+| `prefix`     | `string` | —       | Regex for a constant prefix to ignore during case conversion.                  |
+| `vocab`      | `bool`   | `true`  | Set `false` to disable active vocabularies.                                    |
 
 **`$title` styles:**
 
-- **AP** (Associated Press): capitalize first and last words; capitalize "to"
-  in infinitives; do not capitalize articles, conjunctions, and prepositions of
+- **AP** (Associated Press): capitalize first and last words; capitalize "to" in
+  infinitives; do not capitalize articles, conjunctions, and prepositions of
   three letters or fewer.
-- **Chicago** (Chicago Manual of Style): capitalize first and last words; do
-  not capitalize articles (a, an, the), coordinating conjunctions (and, but,
-  or, for, nor), and prepositions regardless of length.
+- **Chicago** (Chicago Manual of Style): capitalize first and last words; do not
+  capitalize articles (a, an, the), coordinating conjunctions (and, but, or,
+  for, nor), and prepositions regardless of length.
 
 `message` supports one or two `%s` specifiers: with two, the first is the found
 text and the second is the expected form.
@@ -343,40 +345,40 @@ when a **condition** is met. All metric rules are automatically summary-scoped
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `formula` | `string` | — | Arithmetic expression using pre-defined variables and operators. |
-| `condition` | `string` | — | Binary comparison (e.g. `> 8.0`, `< 1`, `>= 100`, `== 0`, `<= 5`). |
+| Key         | Type     | Default | Description                                                        |
+| ----------- | -------- | ------- | ------------------------------------------------------------------ |
+| `formula`   | `string` | —       | Arithmetic expression using pre-defined variables and operators.   |
+| `condition` | `string` | —       | Binary comparison (e.g. `> 8.0`, `< 1`, `>= 100`, `== 0`, `<= 5`). |
 
 `message` supports one `%s` placeholder replaced with the formula result.
 
 ### Variables
 
-| Variable | Description |
-| --- | --- |
-| `blockquote` | Number of `blockquote` tags. |
-| `characters` | Number of characters. |
-| `complex_words` | Polysyllabic words without common suffixes (`es`, `ed`, `ing`, …). |
-| `heading.h{n}` | Number of headings at level _n_ (e.g. `heading.h1`). |
-| `list` | Number of `ol` and `ul` tags. |
-| `long_words` | Words with more than 6 characters. |
-| `paragraphs` | Number of paragraphs. |
-| `polysyllabic_words` | Words with more than 2 syllables. |
-| `pre` | Number of `pre` tags. |
-| `sentences` | Number of sentences. |
-| `syllables` | Number of syllables. |
-| `words` | Number of words. |
+| Variable             | Description                                                        |
+| -------------------- | ------------------------------------------------------------------ |
+| `blockquote`         | Number of `blockquote` tags.                                       |
+| `characters`         | Number of characters.                                              |
+| `complex_words`      | Polysyllabic words without common suffixes (`es`, `ed`, `ing`, …). |
+| `heading.h{n}`       | Number of headings at level _n_ (e.g. `heading.h1`).               |
+| `list`               | Number of `ol` and `ul` tags.                                      |
+| `long_words`         | Words with more than 6 characters.                                 |
+| `paragraphs`         | Number of paragraphs.                                              |
+| `polysyllabic_words` | Words with more than 2 syllables.                                  |
+| `pre`                | Number of `pre` tags.                                              |
+| `sentences`          | Number of sentences.                                               |
+| `syllables`          | Number of syllables.                                               |
+| `words`              | Number of words.                                                   |
 
 ### Operators
 
-| Operator | Description |
-| --- | --- |
-| `+` | Addition |
-| `-` | Subtraction |
-| `*` | Multiplication |
-| `/` | Division |
-| `math.sqrt(x)` | Square root of _x_ |
-| `math.abs(x)` | Absolute value of _x_ |
+| Operator       | Description           |
+| -------------- | --------------------- |
+| `+`            | Addition              |
+| `-`            | Subtraction           |
+| `*`            | Multiplication        |
+| `/`            | Division              |
+| `math.sqrt(x)` | Square root of _x_    |
+| `math.abs(x)`  | Absolute value of _x_ |
 
 Condition operators: `>`, `<`, `==`, `>=`, `<=`.
 
@@ -388,7 +390,7 @@ message: "Try to keep the Flesch-Kincaid grade level (%s) below 8."
 link: https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
 formula: |
   (0.39 * (words / sentences)) + (11.8 * (syllables / words)) - 15.59
-condition: '> 8.0'
+condition: "> 8.0"
 ```
 
 ---
@@ -399,23 +401,23 @@ Spell checking based on **Hunspell-compatible dictionaries**.
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `dictionaries` | `array` | `["en_US"]` | Dictionary names to load. Vale looks for `<name>.dic` and `<name>.aff` in `<StylesPath>/config/dictionaries`. |
-| `append` | `bool` | `false` | When `true`, adds custom dictionaries after the default Vale dictionary instead of replacing it. |
-| `dicpath` | `string` | — | Directory for `.dic`/`.aff` files. Absolute or relative to `StylesPath`. Can also be set via `DICPATH` env var. |
-| `custom` | `bool` | `false` | When `true`, disables the built-in filters (see below) so only user-defined `filters` apply. |
-| `filters` | `array` | _(built-in)_ | Regex patterns for words to ignore during spell checking. |
-| `ignore` | `string` | — | Relative path (from `<StylesPath>/config/ignore`) to a file of words to ignore (one per line, case-insensitive). |
-| `vocab` | `bool` | `true` | Set `false` to disable active vocabularies. |
+| Key            | Type     | Default      | Description                                                                                                      |
+| -------------- | -------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `dictionaries` | `array`  | `["en_US"]`  | Dictionary names to load. Vale looks for `<name>.dic` and `<name>.aff` in `<StylesPath>/config/dictionaries`.    |
+| `append`       | `bool`   | `false`      | When `true`, adds custom dictionaries after the default Vale dictionary instead of replacing it.                 |
+| `dicpath`      | `string` | —            | Directory for `.dic`/`.aff` files. Absolute or relative to `StylesPath`. Can also be set via `DICPATH` env var.  |
+| `custom`       | `bool`   | `false`      | When `true`, disables the built-in filters (see below) so only user-defined `filters` apply.                     |
+| `filters`      | `array`  | _(built-in)_ | Regex patterns for words to ignore during spell checking.                                                        |
+| `ignore`       | `string` | —            | Relative path (from `<StylesPath>/config/ignore`) to a file of words to ignore (one per line, case-insensitive). |
+| `vocab`        | `bool`   | `true`       | Set `false` to disable active vocabularies.                                                                      |
 
 ### Built-in filters (active when `custom` is `false`)
 
-| Filter | Description |
-| --- | --- |
-| `[A-Z]{1}[a-z]+[A-Z]+\w+` | Mixed-case words (e.g. "MongoDB"). |
-| `[^a-zA-Z_']` | Words containing non-word tokens (numbers, etc.). |
-| `[A-Z]+$` | Fully upper-cased words. |
+| Filter                    | Description                                       |
+| ------------------------- | ------------------------------------------------- |
+| `[A-Z]{1}[a-z]+[A-Z]+\w+` | Mixed-case words (e.g. "MongoDB").                |
+| `[^a-zA-Z_']`             | Words containing non-word tokens (numbers, etc.). |
+| `[A-Z]+$`                 | Fully upper-cased words.                          |
 
 Default dictionary: open-source American English (`en_US-web`).
 
@@ -469,23 +471,23 @@ sentence-scoped.
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `tokens` | `[]NLPToken` | — | Ordered list of token descriptors (see NLPToken below). |
-| `ignorecase` | `bool` | `false` | Case-insensitive matching. |
+| Key          | Type         | Default | Description                                             |
+| ------------ | ------------ | ------- | ------------------------------------------------------- |
+| `tokens`     | `[]NLPToken` | —       | Ordered list of token descriptors (see NLPToken below). |
+| `ignorecase` | `bool`       | `false` | Case-insensitive matching.                              |
 
-At least one entry must specify a `pattern` — this is the anchor. Vale finds
-all instances of the first pattern, then checks that the surrounding tokens
-match the rest of the sequence.
+At least one entry must specify a `pattern` — this is the anchor. Vale finds all
+instances of the first pattern, then checks that the surrounding tokens match
+the rest of the sequence.
 
 ### NLPToken fields
 
-| Field | Type | Required | Description |
-| --- | --- | --- | --- |
-| `pattern` | `string` | If no `tag` | Regex to match the token text. |
-| `tag` | `string` | If no `pattern` | Part-of-speech tag. Use `\|` to accept alternatives (e.g. `VB\|VBN`). |
-| `negate` | `bool` | No | When `true`, this position must **not** match. |
-| `skip` | `int` | No | Allow up to _n_ intervening tokens between this and the next entry. |
+| Field     | Type     | Required        | Description                                                           |
+| --------- | -------- | --------------- | --------------------------------------------------------------------- |
+| `pattern` | `string` | If no `tag`     | Regex to match the token text.                                        |
+| `tag`     | `string` | If no `pattern` | Part-of-speech tag. Use `\|` to accept alternatives (e.g. `VB\|VBN`). |
+| `negate`  | `bool`   | No              | When `true`, this position must **not** match.                        |
+| `skip`    | `int`    | No              | Allow up to _n_ intervening tokens between this and the next entry.   |
 
 `message` supports positional format specifiers: `%[N]s` refers to the _N_-th
 token in the sequence.
@@ -514,9 +516,9 @@ Executes arbitrary logic via a **Tengo** script (a Go-like scripting language).
 
 ### Keys
 
-| Key | Type | Default | Description |
-| --- | --- | --- | --- |
-| `script` | `string` | — | Filename of the Tengo script, stored at `<StylesPath>/config/scripts`. |
+| Key      | Type     | Default | Description                                                            |
+| -------- | -------- | ------- | ---------------------------------------------------------------------- |
+| `script` | `string` | —       | Filename of the Tengo script, stored at `<StylesPath>/config/scripts`. |
 
 ### Script contract
 
@@ -540,7 +542,7 @@ script: MyScript.tengo
 
 ### Example script (`MyScript.tengo`)
 
-```tengo
+````tengo
 text := import("text")
 
 matches := []
@@ -560,4 +562,4 @@ for line in text.split(document, "\n") {
         count += 1
     }
 }
-```
+````

@@ -9,15 +9,15 @@
 
 ## Goal
 
-Exhaustively read the Vale documentation on style authoring and condense it
-into a set of dense, machine-optimized reference skills that an AI agent can
-use when creating or modifying Vale styles (collections of `.yml` rule files).
+Exhaustively read the Vale documentation on style authoring and condense it into
+a set of dense, machine-optimized reference skills that an AI agent can use when
+creating or modifying Vale styles (collections of `.yml` rule files).
 
 ## Starting point
 
-Start at <https://vale.sh/docs/styles>. This is the main page for
-understanding Vale's style/extension system. From here, discover all related
-pages needed to fully understand Vale style authoring.
+Start at <https://vale.sh/docs/styles>. This is the main page for understanding
+Vale's style/extension system. From here, discover all related pages needed to
+fully understand Vale style authoring.
 
 ## Process
 
@@ -43,8 +43,8 @@ pages needed to fully understand Vale style authoring.
 
 4. **Create skill files** — Write each document to disk as a skill:
    - Parent skill: `skills/vale-style-authoring/SKILL.md`
-   - Sub-skills: `skills/vale-style-authoring-{topic}/SKILL.md`
-     (sibling directories, e.g., `vale-style-authoring-checks/`)
+   - Sub-skills: `skills/vale-style-authoring-{topic}/SKILL.md` (sibling
+     directories, e.g., `vale-style-authoring-checks/`)
    - Every `SKILL.md` must include YAML frontmatter with `name` and
      `description`.
    - The parent `SKILL.md` must list every sub-skill by name and describe what
