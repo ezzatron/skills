@@ -74,8 +74,8 @@ action:
   name: edit
   params:
     - regex
-    - '[.?!]'
-    - ''
+    - "[.?!]"
+    - ""
 tokens:
   - '[a-z0-9][.?!](?=\s|$)'
 ```
@@ -409,13 +409,13 @@ Coming soon.
 
 ## Config directory summary
 
-| Path                                  | Purpose                                                          |
-| ------------------------------------- | ---------------------------------------------------------------- |
-| `<StylesPath>/config/actions/`        | Tengo scripts for `suggest` actions.                             |
-| `<StylesPath>/config/dictionaries/`   | Hunspell-compatible dictionaries for `Vale.Spelling`.            |
-| `<StylesPath>/config/filters/`        | Saved `.expr` filter files.                                      |
-| `<StylesPath>/config/ignore/`         | Word-list files for the spelling `ignore` key (one word per line). |
-| `<StylesPath>/config/scripts/`        | Tengo scripts for `script` check extensions.                     |
-| `<StylesPath>/config/templates/`      | Custom `.tmpl` output template files.                            |
-| `<StylesPath>/config/views/`          | View YAML files for structured file linting.                     |
-| `<StylesPath>/config/vocabularies/`   | Vocabulary folders containing `accept.txt` and `reject.txt`.    |
+| Path                                | Purpose                                                            |
+| ----------------------------------- | ------------------------------------------------------------------ |
+| `<StylesPath>/config/actions/`      | Tengo scripts for `suggest` actions.                               |
+| `<StylesPath>/config/dictionaries/` | Hunspell-compatible dictionaries for `Vale.Spelling`.              |
+| `<StylesPath>/config/filters/`      | Saved `.expr` filter files.                                        |
+| `<StylesPath>/config/ignore/`       | Word-list files for the spelling `ignore` key (one word per line). |
+| `<StylesPath>/config/scripts/`      | Tengo scripts for `script` check extensions.                       |
+| `<StylesPath>/config/templates/`    | Custom `.tmpl` output template files.                              |
+| `<StylesPath>/config/views/`        | View YAML files for structured file linting.                       |
+| `<StylesPath>/config/vocabularies/` | Vocabulary folders containing `accept.txt` and `reject.txt`.       |

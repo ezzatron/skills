@@ -15,14 +15,14 @@ covers all 11 check types, their keys, and complete examples.
 
 These keys are available on every check type (not repeated per-type below):
 
-| Key       | Type     | Description                                                                 |
-| --------- | -------- | --------------------------------------------------------------------------- |
-| `extends` | `string` | **Required.** The check type name.                                          |
-| `message` | `string` | Alert message. Use `%s` for match interpolation.                            |
-| `level`   | `string` | `suggestion`, `warning`, or `error`.                                        |
+| Key       | Type              | Description                                                                                                                         |
+| --------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `extends` | `string`          | **Required.** The check type name.                                                                                                  |
+| `message` | `string`          | Alert message. Use `%s` for match interpolation.                                                                                    |
+| `level`   | `string`          | `suggestion`, `warning`, or `error`.                                                                                                |
 | `scope`   | `string \| array` | The scope to lint (e.g. `heading`, `sentence`, `text`, `raw`, `paragraph`). Accepts a YAML array for multiple or chained selectors. |
-| `link`    | `string` | URL for additional context shown with the alert.                            |
-| `limit`   | `int`    | Max times the rule can trigger per file.                                    |
+| `link`    | `string`          | URL for additional context shown with the alert.                                                                                    |
+| `limit`   | `int`             | Max times the rule can trigger per file.                                                                                            |
 
 ---
 
@@ -404,15 +404,15 @@ Spell checking based on **Hunspell-compatible dictionaries**.
 
 ### Keys
 
-| Key            | Type     | Default      | Description                                                                                                      |
-| -------------- | -------- | ------------ | ---------------------------------------------------------------------------------------------------------------- |
-| `dictionaries` | `array`  | `["en_US"]`  | Dictionary names to load. Vale looks for `<name>.dic` and `<name>.aff` in `<StylesPath>/config/dictionaries`.    |
-| `append`       | `bool`   | `false`      | When `true`, adds custom dictionaries after the default Vale dictionary instead of replacing it.                 |
-| `dicpath`      | `string` | —            | Directory for `.dic`/`.aff` files. Absolute or relative to `StylesPath`. Can also be set via `DICPATH` env var.  |
-| `custom`       | `bool`   | `false`      | When `true`, disables the built-in filters (see below) so only user-defined `filters` apply.                     |
-| `filters`      | `array`  | _(built-in)_ | Regex patterns for words to ignore during spell checking.                                                        |
+| Key            | Type              | Default      | Description                                                                                                                                                        |
+| -------------- | ----------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `dictionaries` | `array`           | `["en_US"]`  | Dictionary names to load. Vale looks for `<name>.dic` and `<name>.aff` in `<StylesPath>/config/dictionaries`.                                                      |
+| `append`       | `bool`            | `false`      | When `true`, adds custom dictionaries after the default Vale dictionary instead of replacing it.                                                                   |
+| `dicpath`      | `string`          | —            | Directory for `.dic`/`.aff` files. Absolute or relative to `StylesPath`. Can also be set via `DICPATH` env var.                                                    |
+| `custom`       | `bool`            | `false`      | When `true`, disables the built-in filters (see below) so only user-defined `filters` apply.                                                                       |
+| `filters`      | `array`           | _(built-in)_ | Regex patterns for words to ignore during spell checking.                                                                                                          |
 | `ignore`       | `string \| array` | —            | Path(s) (relative to `<StylesPath>/config/ignore`) to file(s) of words to ignore (one per line, case-insensitive). Accepts a single string or an array of strings. |
-| `vocab`        | `bool`   | `true`       | Set `false` to disable active vocabularies.                                                                      |
+| `vocab`        | `bool`            | `true`       | Set `false` to disable active vocabularies.                                                                                                                        |
 
 ### Built-in filters (active when `custom` is `false`)
 

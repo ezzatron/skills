@@ -20,7 +20,7 @@ keys (`extends`, `message`, `tokens`, etc.).
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `suggest` | `func suggest(match string) []string` | Returns an array of dynamically-computed suggestions (via script or spelling dictionaries).                                 |
 | `replace` | `func replace(match string) []string` | Returns an array of static, user-provided replacement strings. Auto-populated by `substitution` and `capitalization` rules. |
-| `remove`  | `func remove(match string)`           | Removes the matched text entirely. Takes no `params`.                                                               |
+| `remove`  | `func remove(match string)`           | Removes the matched text entirely. Takes no `params`.                                                                       |
 | `edit`    | `func edit(match string) string`      | Performs an in-place edit on the matched text using a named operation and parameters.                                       |
 
 Actions fall into two categories:
@@ -69,8 +69,8 @@ action:
   name: edit
   params:
     - regex
-    - '_'
-    - '-'
+    - "_"
+    - "-"
 nonword: true
 tokens:
   - '\w+_\w+'
@@ -86,11 +86,11 @@ action:
   name: edit
   params:
     - regex
-    - '([a-z])([A-Z])'
-    - '$1-$2'
+    - "([a-z])([A-Z])"
+    - "$1-$2"
 nonword: true
 tokens:
-  - '[A-Z][a-zA-Z]*[A-Z][a-zA-Z]*'
+  - "[A-Z][a-zA-Z]*[A-Z][a-zA-Z]*"
 ```
 
 #### trim_right: remove trailing exclamation mark
