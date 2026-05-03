@@ -2,8 +2,8 @@
 name: google-developer-style-guide-word-list
 description: >-
   Word list from the Google developer documentation style guide. Contains
-  recommended and non-recommended terms with alternatives. The full word list
-  is in word-list.json alongside this file.
+  recommended and non-recommended terms with alternatives. The full word list is
+  in word-list.json alongside this file.
 ---
 
 # Google developer documentation style guide — word list
@@ -15,15 +15,15 @@ authoring.
 
 ## Word list structure
 
-The file `word-list.json` (alongside this file) is a JSON array of objects.
-Each object has the following fields:
+The file `word-list.json` (alongside this file) is a JSON array of objects. Each
+object has the following fields:
 
-| Field            | Type             | Description                                                                 |
-| ---------------- | ---------------- | --------------------------------------------------------------------------- |
-| `term`           | string           | The word or phrase.                                                         |
-| `recommendation` | string           | One of `"recommended"`, `"not recommended"`, or `"use with care"`.          |
-| `details`        | string           | Explanation and guidance from the style guide.                              |
-| `use_instead`    | string or `null` | The preferred alternative, when the term is not recommended or needs care.  |
+| Field            | Type             | Description                                                                |
+| ---------------- | ---------------- | -------------------------------------------------------------------------- |
+| `term`           | string           | The word or phrase.                                                        |
+| `recommendation` | string           | One of `"recommended"`, `"not recommended"`, or `"use with care"`.         |
+| `details`        | string           | Explanation and guidance from the style guide.                             |
+| `use_instead`    | string or `null` | The preferred alternative, when the term is not recommended or needs care. |
 
 ## Usage examples
 

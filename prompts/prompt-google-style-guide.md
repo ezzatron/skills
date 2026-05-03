@@ -9,9 +9,9 @@
 
 ## Goal
 
-Exhaustively read the Google developer documentation style guide and condense
-it into a set of dense, machine-optimized reference skills that an AI agent can
-use when writing or reviewing technical documentation.
+Exhaustively read the Google developer documentation style guide and condense it
+into a set of dense, machine-optimized reference skills that an AI agent can use
+when writing or reviewing technical documentation.
 
 ## Starting point
 
@@ -21,10 +21,10 @@ guide.
 
 ## Process
 
-1. **Discover** — Fetch the landing page. Identify every article linked from
-   the navigation/table of contents. Use `explore` agents to quickly gather the
-   full list of article URLs. Stay within `developers.google.com/style/*` — do
-   not follow links outside this path.
+1. **Discover** — Fetch the landing page. Identify every article linked from the
+   navigation/table of contents. Use `explore` agents to quickly gather the full
+   list of article URLs. Stay within `developers.google.com/style/*` — do not
+   follow links outside this path.
 
 2. **Read and condense** — Dispatch `general-purpose` subagents in parallel to
    read each article (or group of closely related articles) IN FULL via
@@ -46,15 +46,15 @@ guide.
      failed.
 
 4. **Word list special case** — The word list article
-   (`developers.google.com/style/word-list`) is large reference data. Produce
-   it as a JSON file (e.g., `word-list.json`), not Markdown. Structure it so
-   agents can use `jq` or similar tooling to search entries. Include every
-   entry from the original.
+   (`developers.google.com/style/word-list`) is large reference data. Produce it
+   as a JSON file (e.g., `word-list.json`), not Markdown. Structure it so agents
+   can use `jq` or similar tooling to search entries. Include every entry from
+   the original.
 
 5. **Create skill files** — Write each document to disk as a skill:
    - Parent skill: `skills/google-developer-style-guide/SKILL.md`
-   - Sub-skills: `skills/google-developer-style-guide-{topic}/SKILL.md`
-     (sibling directories, e.g., `google-developer-style-guide-punctuation/`)
+   - Sub-skills: `skills/google-developer-style-guide-{topic}/SKILL.md` (sibling
+     directories, e.g., `google-developer-style-guide-punctuation/`)
    - The word list JSON goes inside the relevant sub-skill directory alongside
      its `SKILL.md`.
    - Every `SKILL.md` must include YAML frontmatter:
@@ -72,16 +72,17 @@ guide.
 6. **Verify** — After all files are created, run a verification pass:
    - Confirm every `SKILL.md` has valid YAML frontmatter with `name` and
      `description`.
-   - Confirm JSON files parse correctly (`cat file.json | python3 -c
-     "import json,sys; json.load(sys.stdin); print('OK')"` or equivalent).
+   - Confirm JSON files parse correctly
+     (`cat file.json | python3 -c "import json,sys; json.load(sys.stdin); print('OK')"`
+     or equivalent).
    - Flag any skill file under 500 bytes as suspiciously short — the subagent
      may have truncated content.
    - Report a summary of all created files with byte counts.
 
 ## Constraints
 
-- Do not use any prior knowledge of the Google style guide. Read everything
-  from the source.
+- Do not use any prior knowledge of the Google style guide. Read everything from
+  the source.
 - Follow links within `developers.google.com/style/*` as needed to fully
   understand each topic. Do not follow links outside this path.
 - No depth limit on link following within the allowed path, but don't re-read
