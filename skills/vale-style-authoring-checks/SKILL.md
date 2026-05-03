@@ -45,7 +45,9 @@ Flags the **presence** of particular tokens (words, phrases, or regex patterns).
 `tokens` entries are compiled into `(?i)(?m)\b(?:token1|token2)\b`. Use `raw`
 when you need full regex control; entries are concatenated.
 
-`message` supports one `%s` placeholder replaced with the matched text.
+`message` supports one `%s` placeholder replaced with the matched text. When an
+`action` is configured, a second `%s` is available for the action's suggested
+replacement.
 
 ### Example
 
