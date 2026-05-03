@@ -35,7 +35,7 @@ fully understand Vale style authoring.
    (e.g., all check types might be one document, or split into 2–3 if the
    content is substantial enough).
 
-3. **Format** — Same rules as the Google style guide prompt:
+3. **Format** — Dense reference style:
    - Dense reference with rules, tables, and concrete YAML examples.
    - Every field, option, and behavior documented on the original page must be
      captured.
