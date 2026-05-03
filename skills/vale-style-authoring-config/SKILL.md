@@ -88,12 +88,14 @@ A `StylesPath` contains style directories and a special `config` directory:
 ```
 <StylesPath>/
 ├── config/              # Special directory
-│   ├── vocabularies/    # Project-specific terminology lists
+│   ├── actions/         # Tengo scripts for suggest actions
 │   ├── dictionaries/    # Hunspell-compatible spelling dictionaries
-│   ├── templates/       # Output format templates
-│   ├── actions/         # Solutions to custom rules
 │   ├── filters/         # Configuration filters
-│   └── scripts/         # Tengo scripts
+│   ├── ignore/          # Spelling ignore word lists
+│   ├── scripts/         # Tengo scripts for script checks
+│   ├── templates/       # Output format templates
+│   ├── views/           # View YAML files for structured linting
+│   └── vocabularies/    # Project-specific terminology lists
 ├── write-good/          # A style
 └── MyStyle/             # Another style
 ```
