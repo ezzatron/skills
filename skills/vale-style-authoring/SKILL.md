@@ -175,7 +175,7 @@ scope:
 ```
 
 **Format qualifier:** Append format to any scope: `heading.md`, `paragraph.rst`,
-`comment.line`, `text.html`.
+`comment.line.py`, `text.html`.
 
 ## Filters
 
