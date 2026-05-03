@@ -1,5 +1,12 @@
 # Google developer documentation style guide → skills
 
+## General conventions
+
+- Use **sentence case** for all headings in produced skill files — capitalize
+  only the first word and proper nouns.
+- All skill files go under a `skills/` directory (not `.agents/skills/`)
+  relative to the current working directory.
+
 ## Goal
 
 Exhaustively read the Google developer documentation style guide and condense
