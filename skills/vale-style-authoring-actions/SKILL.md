@@ -105,7 +105,7 @@ action:
     - trim_right
     - "!"
 tokens:
-  - '\w+!(?:\s|$)'
+  - '\w+!(?=\s|$)'
 ```
 
 #### trim_left: remove leading extra space
@@ -145,7 +145,7 @@ nonword: true
 action:
   name: remove
 tokens:
-  - "..."
+  - '\.\.\.'
 ```
 
 ---
