@@ -396,7 +396,7 @@ elements.
 
 ```html
 You can find more information in
-<a href="https://example.com/very-long-url...">his biography.</a>
+<a href="https://example.com/very-long-url...">his biography</a>.
 ```
 
 ---
