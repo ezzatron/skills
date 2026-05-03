@@ -6,13 +6,13 @@ description: >-
   structure.
 ---
 
-# Google developer documentation style guide — grammar reference
+# Google developer documentation style guide—grammar reference
 
 ## Articles (a, an, the)
 
 ### Core rule
 
-Always include articles (`a`, `an`, `the`). Never drop them for brevity —
+Always include articles (`a`, `an`, `the`). Never drop them for brevity—
 including in headings and titles.
 
 | ✅ Do                    | ❌ Don't           |

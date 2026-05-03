@@ -6,7 +6,7 @@ description: >-
   in word-list.json alongside this file.
 ---
 
-# Google developer documentation style guide — word list
+# Google developer documentation style guide—word list
 
 This skill provides the word list from the
 [Google developer documentation style guide](https://developers.google.com/style/word-list),
@@ -50,8 +50,8 @@ jq '.[] | select(.term | test("blacklist"; "i")) | {term, use_instead, details}'
 The word list contains **597 entries** across the following recommendation
 categories:
 
-- **Recommended** (358) — Terms that are approved for use.
-- **Not recommended** (147) — Terms to avoid, usually with suggested
+- **Recommended** (358)—Terms that are approved for use.
+- **Not recommended** (147)—Terms to avoid, usually with suggested
   alternatives.
-- **Use with care** (92) — Terms that are acceptable in specific contexts but
+- **Use with care** (92)—Terms that are acceptable in specific contexts but
   should be used carefully.

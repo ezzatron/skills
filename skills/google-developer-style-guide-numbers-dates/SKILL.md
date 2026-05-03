@@ -88,7 +88,7 @@ Numeral + `%`, no space.
 Hyphen, no spaces.
 
 - ✅ `2012-2016`
-- For ranges with units, see [Units — Ranges](#ranges-of-numbers-with-units).
+- For ranges with units, see [Units—Ranges](#ranges-of-numbers-with-units).
 
 ## Suspended hyphens
 
@@ -238,7 +238,7 @@ Hyphen-separated: `AREA-EXCHANGE-NUMBER`
 
 ## International
 
-`+COUNTRY‑AREA‑NUMBER` — plus sign immediately before country code (no space).
+`+COUNTRY‑AREA‑NUMBER`—plus sign immediately before country code (no space).
 
 - ✅ `+1‑415‑555‑0132`
 
@@ -259,7 +259,7 @@ Nonbreaking space (`&nbsp;`) between number and unit.
 - ✅ `64&nbsp;GB` → 64 GB · `25&nbsp;mm` → 25 mm
 - ❌ `64 GB` (regular space) · `64GB` (no space)
 
-**Exceptions — no space:**
+**Exceptions—no space:**
 
 | Category      | Example       |
 | ------------- | ------------- |
@@ -283,7 +283,7 @@ Number + unit modifying a noun: don't hyphenate unless needed for clarity.
 
 ## Ranges of numbers with units
 
-Repeat the unit for each number. Use word "to" (not hyphen — avoids confusion
+Repeat the unit for each number. Use word "to" (not hyphen—avoids confusion
 with minus).
 
 - ✅ `-40 °C to 85 °C`

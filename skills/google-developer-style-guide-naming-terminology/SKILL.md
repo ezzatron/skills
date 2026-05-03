@@ -12,7 +12,7 @@ description: >-
 - Follow standard American English capitalization rules.
 - Don't capitalize without a reason.
 - Don't rely on capitalization alone to convey meaning (e.g., Kubernetes _Pod_
-  vs. generic _pod_ — too subtle for many readers).
+  vs. generic _pod_—too subtle for many readers).
 - Don't use ALL-CAPS except in: official names, abbreviations that are always
   all-caps, or references to all-caps code.
 - Don't use camelCase except in official names or references to camelCase code.
@@ -31,9 +31,9 @@ description: >-
 
 Lowercase the first word after a colon **unless** it is:
 
-- A proper noun — _Open source software: Hadoop_
+- A proper noun—_Open source software: Hadoop_
 - A heading
-- A quotation — _Arthurian wit: "Bring me yon sworde"_
+- A quotation—_Arthurian wit: "Bring me yon sworde"_
 - Text following a label like _Caution_ or _Note_
 
 ## Figures
@@ -60,7 +60,7 @@ Lowercase the first word after a colon **unless** it is:
 
 ## Casing style names
 
-- Don't use names like _camel case_ or _snake case_ to describe casing styles —
+- Don't use names like _camel case_ or _snake case_ to describe casing styles—
   they don't localize well and aren't standardized.
 - Instead, describe the format and provide an example.
 
@@ -89,7 +89,7 @@ In most contexts, using _acronym_ for both acronyms and initialisms is fine.
 
 Some words have long and short forms (e.g., _application_/_app_,
 _demonstration_/_demo_, _synchronize_/_sync_). Short forms are **not**
-abbreviations — no period needed. Use the speaking test: if you say the short
+abbreviations—no period needed. Use the speaking test: if you say the short
 form as a word, treat it as a word.
 
 ## When to use abbreviations
@@ -199,7 +199,7 @@ _an SAP_.
 
 | Label                                                 | Meaning                                                                                                        |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| **Use with caution**                                  | Avoid when possible; term may be ambiguous/obscure. Alternatives suggested. OK if needed — define or use once. |
+| **Use with caution**                                  | Avoid when possible; term may be ambiguous/obscure. Alternatives suggested. OK if needed—define or use once. |
 | **Don't use**                                         | Preferred to never use. May be ambiguous, offensive, or non-inclusive. If in code, replace or write around.    |
 | **Android** / **Google Cloud** / **Google Workspace** | Guidance applies only to that product's documentation.                                                         |
 

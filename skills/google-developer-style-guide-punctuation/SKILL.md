@@ -28,7 +28,7 @@ Place a comma after an introductory word or phrase.
 
 ### Two independent clauses joined by a coordinating conjunction
 
-Insert a comma before the conjunction (_and, but, or, nor, for, so, yet_) —
+Insert a comma before the conjunction (_and, but, or, nor, for, so, yet_)—
 unless both clauses are very short.
 
 | Do                                                                    | Don't                                                                |
@@ -252,7 +252,7 @@ items/headings).
 
 ### With lists
 
-See the Lists page for rules on end punctuation in list items.
+See the Lists section in the `google-developer-style-guide-structure` skill for rules on end punctuation in list items.
 
 ### With URLs
 

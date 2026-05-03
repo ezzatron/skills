@@ -19,11 +19,11 @@ description: >-
 
 - Use `<i>` / `_` for:
   - Introducing or discussing terms, words as words.
-  - Emphasis (importance) — but prefer writing that carries emphasis without
+  - Emphasis (importance)—but prefer writing that carries emphasis without
     formatting.
-  - Titles of full-length works (books, movies, web series) — unless part of a
+  - Titles of full-length works (books, movies, web series)—unless part of a
     link.
-  - Mathematical variables (e.g., _x_ + _y_ = 3) — don't italicize operators.
+  - Mathematical variables (e.g., _x_ + _y_ = 3)—don't italicize operators.
   - Version variables (e.g., version 1.4._x_).
 - In HTML, use `<em>` for semantic emphasis (renders as italic).
 - In Markdown, prefer `_` over `*` for italic (easier to distinguish from bold
@@ -80,7 +80,7 @@ Use code font (`` ` `` / `<code>`) in running text for anything related to code.
 | Database elements (rows, columns)             | `month`, `datetime`                                          |
 | Defined (constant) values                     | `"San Francisco"`                                            |
 | DNS record types                              | `AAAA`                                                       |
-| Element names (HTML/XML)                      | `script`, `ClinicalDocument` — no angle brackets around name |
+| Element names (HTML/XML)                      | `script`, `ClinicalDocument`—no angle brackets around name |
 | Enum names                                    | `BOOL = 1;`                                                  |
 | Environment variable names                    | `CHROME_REMOTE_DESKTOP_DEFAULT_DESKTOP_SIZES`                |
 | Filenames, extensions, paths                  | `pg_hba.conf`, `/etc/postgresql/13/main`                     |
@@ -183,7 +183,7 @@ after the element.
 - Wrap lines at 80 characters (shorter if narrow reading context expected).
 - Mark code blocks as preformatted: `<pre>` in HTML; indent 4 spaces in
   Markdown.
-- Indicate omitted code with a **comment in the language's syntax** — never
+- Indicate omitted code with a **comment in the language's syntax**—never
   `...` or `…`. Don't format blocks with omissions as click-to-copy.
 
 ```
@@ -379,7 +379,7 @@ elements.
 
 ## Basic rules
 
-- **No tabs** — use spaces only.
+- **No tabs**—use spaces only.
 - **Indent 2 spaces** per level.
 - **All-lowercase** for elements and attributes.
 - **No trailing spaces** (except where Markdown requires them).
@@ -625,7 +625,7 @@ Three dots, no spaces: `[GLOBAL_FLAG ...]`.
 
 Avoid `[]`, `{}`, `|`, `...` in click-to-copy. Instead:
 
-1. **Remove optional args** — link to reference for full options.
+1. **Remove optional args**—link to reference for full options.
 2. **Separate code blocks** for each option variant.
 3. **Separate sections/tasks** for different option combinations.
 4. **Warn the reader** that the command contains optional args, then provide a
@@ -657,8 +657,8 @@ Avoid `[]`, `{}`, `|`, `...` in click-to-copy. Instead:
 | Command name  | e.g., `find`                                              |
 | Argument      | e.g., `/usr/src/linux` (a path)                           |
 | Option        | e.g., `-follow`, `-type f` (hyphen is part of the option) |
-| Metacharacter | `*`, `?`, `^` — for globbing/filename expansion           |
-| Pipe          | `\|` — redirects output to another command                |
+| Metacharacter | `*`, `?`, `^`—for globbing/filename expansion           |
+| Pipe          | `\|`—redirects output to another command                |
 | Redirection   | `>`, `<`, `<<`, `>>`                                      |
 
 ### Linux signals

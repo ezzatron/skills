@@ -19,9 +19,9 @@ description: >-
 - Avoid unnecessary font formatting (screen readers explicitly describe text
   modifications).
 - Document specialized accessibility features of the product explicitly.
-- Don't force line breaks (hard returns) within sentences/paragraphs — breaks
+- Don't force line breaks (hard returns) within sentences/paragraphs—breaks
   fail in resized windows or enlarged text.
-- Avoid camelCase and ALL CAPS — some screen readers read capitals individually;
+- Avoid camelCase and ALL CAPS—some screen readers read capitals individually;
   some languages are unicase.
 - Not all punctuation is read by screen readers. Convey meaning without relying
   on punctuation. Avoid exclamation marks, question marks, and semicolons when
@@ -50,7 +50,7 @@ description: >-
 ## Headings and titles
 
 - Use a heading hierarchy; don't skip levels (e.g., `h3` only under `h2`).
-- To change heading appearance, use CSS — don't pick a wrong heading level.
+- To change heading appearance, use CSS—don't pick a wrong heading level.
 - No empty headings or headings with no associated content.
 - Tag headings with heading elements (`h1`–`h6` in HTML; `#`–`######` in
   Markdown).
@@ -58,7 +58,7 @@ description: >-
 
 ## Links
 
-- Use meaningful link text — links must make sense when read out of context.
+- Use meaningful link text—links must make sense when read out of context.
 
 | Do                                                    | Don't                      |
 | ----------------------------------------------------- | -------------------------- |
@@ -78,9 +78,9 @@ description: >-
 
 - Every image must have an `alt` attribute. Use descriptive alt text summarizing
   intent, or empty alt text for decorative images.
-- Don't present new information only in images — always provide equivalent text.
+- Don't present new information only in images—always provide equivalent text.
 - Don't repeat images unless absolutely necessary.
-- Don't use images of text, code samples, or terminal output — use actual text.
+- Don't use images of text, code samples, or terminal output—use actual text.
 - Prefer SVG over PNG (SVGs stay sharp when zoomed).
 
 ## Videos, recordings, and GIFs
@@ -111,7 +111,7 @@ description: >-
 - Avoid tables in the middle of numbered procedures.
 - Don't merge cells (`colspan`/`rowspan`).
 - Don't use tables unless they're the best way to present the information.
-- Don't convey new information through images/symbols alone in tables — always
+- Don't convey new information through images/symbols alone in tables—always
   provide a descriptive `alt` attribute.
 
 ## Interactive elements
@@ -134,7 +134,7 @@ description: >-
 
 - Use standard site styles and JS as much as possible.
 - Accessible color contrast: 4.5:1 ratio minimum for text.
-- Don't use `visibility:hidden` or `display:none` — both hide content from
+- Don't use `visibility:hidden` or `display:none`—both hide content from
   screen readers.
 - Avoid `mouseover` events; if used, add alternate `focus` and `blur` events for
   keyboard users.
@@ -166,7 +166,7 @@ communicating information.**
 | Click **Save**.          | _(describe visual appearance)_ |
 | Click **Notifications**. | Click the bell icon.           |
 
-- Don't use directional language (_above_, _below_, _right-hand side_) — fails
+- Don't use directional language (_above_, _below_, _right-hand side_)—fails
   for accessibility and RTL localization.
 - Don't use directional terms for document position. Use _earlier_, _preceding_,
   or _following_ instead.
@@ -282,7 +282,7 @@ ignored:
   _nondisabled person_, _sighted person_, _hearing person_, _person without
   disabilities_, _neurotypical person_.
 - Avoid terms that remove personhood or define people by disability. Use
-  person-first language: _people with disabilities_, _a quadriplegic person_ —
+  person-first language: _people with disabilities_, _a quadriplegic person_—
   not _the disabled_, _a quadriplegic_.
   - **Exception:** Some communities prefer identity-first language (common in
     autistic, blind, Deaf communities). Research and respect community
@@ -301,7 +301,7 @@ ignored:
 
 | Term                 | Meaning                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------- |
-| Localization         | Adapting a product and docs for a specific country (currencies, units, etc.) — more than translation. |
+| Localization         | Adapting a product and docs for a specific country (currencies, units, etc.)—more than translation. |
 | Translation          | Converting one language to another; may involve localization but not synonymous.                      |
 | Internationalization | Designing a product/docs to minimize localization effort (e.g., externalizing UI strings).            |
 
@@ -392,7 +392,7 @@ Replace phrasal/compound verbs with simpler verbs when possible.
 ### Abbreviations and pronouns
 
 - Define abbreviations on first use. They don't translate well.
-- Clarify ambiguous pronoun antecedents — replace pronouns with the appropriate
+- Clarify ambiguous pronoun antecedents—replace pronouns with the appropriate
   noun when ambiguous.
 
 | Do                                                                                 | Don't                                                                         |
@@ -411,7 +411,7 @@ Replace phrasal/compound verbs with simpler verbs when possible.
 - Use _you_ instead of _the user_ or _they_ (unless referring to someone who
   uses the software the reader is developing).
 - Provide context; don't assume prior knowledge.
-- Avoid negative constructions when possible — tell readers what they _can_ do,
+- Avoid negative constructions when possible—tell readers what they _can_ do,
   not what they can't.
 
 ## Be consistent
@@ -452,5 +452,5 @@ Replace phrasal/compound verbs with simpler verbs when possible.
 
 ## Images for translation
 
-- Use screenshots and text in figures sparingly — images don't get translated.
+- Use screenshots and text in figures sparingly—images don't get translated.
 - Convey new information through text, not figures/images.

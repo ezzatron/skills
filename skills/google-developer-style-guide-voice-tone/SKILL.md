@@ -10,7 +10,7 @@ description: >-
 
 ## Tone
 
-**Target:** Conversational, friendly, respectful — like a knowledgeable friend.
+**Target:** Conversational, friendly, respectful—like a knowledgeable friend.
 Casual and natural, not pedantic or pushy. Not overly entertaining, not
 bone-dry. Be human, be memorable, but prioritize clarity and usefulness.
 
@@ -35,14 +35,14 @@ and consistent to aid translation and readers with varying English proficiency.
 
 ### Techniques
 
-- Step back and ask "What am I trying to say?" — use the plain answer.
+- Step back and ask "What am I trying to say?"—use the plain answer.
 - Read aloud; rewrite awkward sentences to be more conversational.
 - Use transitions (_Though_, _This way_) but avoid stilted ones (_However_,
   _Nonetheless_) when they stiffen prose.
 - When in doubt, ask a colleague to review.
 - Above all, communicate useful information clearly and directly.
 
-### Tone spectrum — examples
+### Tone spectrum—examples
 
 | Too informal                                                                                                    | Just right                                                   | Too formal                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ clear who is acting.
 | Send a query to the service. The server sends an acknowledgment. | The service is queried, and an acknowledgment is sent.                      |
 | Send a query to the service. The server sends an acknowledgment. | The service is queried by you, and an acknowledgment is sent by the server. |
 
-### Exceptions — passive voice is acceptable when
+### Exceptions—passive voice is acceptable when
 
 | Reason                                | Example                                                                             |
 | ------------------------------------- | ----------------------------------------------------------------------------------- |
@@ -97,8 +97,7 @@ making decisions.
 | Consider adding a description to your table.                         | Let's add a description to our table.                                      |
 | This document shows you how to develop an app for your organization. | This document shows the user how to develop an app for their organization. |
 
-**Use _user_ only** to refer to the end user of software the reader is building
-— not as a synonym for the reader.
+**Use _user_ only** to refer to the end user of software the reader is building—not as a synonym for the reader.
 
 ### Imperative mood
 
@@ -121,7 +120,7 @@ person; address the reader as _you_ when telling them what to do.
 
 ### First-person plural (_we_, _our_, _us_)
 
-**Allowed** to represent the authoring organization — but the antecedent must be
+**Allowed** to represent the authoring organization—but the antecedent must be
 clear.
 
 | Do                                                                                                   |
@@ -132,8 +131,8 @@ clear.
 
 ### Audience consistency
 
-Identify who _you_ is (developer? sysadmin? other?) early — ideally with an
-explicit audience statement near the top of the document — and maintain that
+Identify who _you_ is (developer? sysadmin? other?) early—ideally with an
+explicit audience statement near the top of the document—and maintain that
 consistently.
 
 ---

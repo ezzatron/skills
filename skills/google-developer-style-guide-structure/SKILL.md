@@ -637,7 +637,7 @@ Use fictional addresses:
 
 ### Word choice for recommendations and requirements
 
-**Avoid `should`** — it creates ambiguity (recommended but optional?).
+**Avoid `should`**—it creates ambiguity (recommended but optional?).
 
 | Situation                 | Use                                           | Example                                                                                 |
 | ------------------------- | --------------------------------------------- | --------------------------------------------------------------------------------------- |

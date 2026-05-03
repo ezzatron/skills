@@ -37,7 +37,7 @@ guidelines as appropriate per programming language.
   Link each to its reference page.
 - Use **code font + double quotes** for string literals (e.g., `"wrap_content"`,
   `"true"`).
-- Match class name spelling exactly as in code (correct casing, no spaces) —
+- Match class name spelling exactly as in code (correct casing, no spaces)—
   e.g., `ActionBar`.
 
 ### Class name pluralization
@@ -51,7 +51,7 @@ English word, not in code font (e.g., "activities", "action bar").
 
 ## Classes, interfaces, structs
 
-**First sentence:** Briefly state the purpose/function of the class —
+**First sentence:** Briefly state the purpose/function of the class—
 information not deducible from the name and signature.
 
 **Additional documentation:** How to use the API, how to invoke/instantiate, key
@@ -163,7 +163,7 @@ description.
 **Required:** Tell the user what replacement to use.
 
 - If versioned: mention the version it was first deprecated in.
-- First sentence appears in summary/index — put the most important info there.
+- First sentence appears in summary/index—put the most important info there.
 - Subsequent sentences: explain why deprecated, other useful details.
 - If a method is deprecated: tell the reader how to update their code.
 
