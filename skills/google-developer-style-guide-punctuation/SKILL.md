@@ -350,8 +350,8 @@ omitted portions — but **never** at the beginning or end of the quote.
 
 | Do                                 | Don't                           |
 | ---------------------------------- | ------------------------------- |
-| …code in there ... we'll explain…  | …code in there...we'll explain… |
-| …code in there ...; we'll explain… | —                               |
+| ...code in there ... we'll explain...  | ...code in there...we'll explain... |
+| ...code in there ...; we'll explain... | —                                   |
 
 ---
 
