@@ -34,8 +34,12 @@ description:
 
 ## Comment-based configuration
 
-All markup formats support inline comment directives to control Vale behavior.
+Most markup formats support inline comment directives to control Vale behavior.
 The directives are identical; only the comment syntax differs per format.
+
+> **Note:** Not all formats support comment-based configuration. DITA and XML
+> have no documented comment-based directives (XML content is processed after
+> conversion to HTML, where HTML comment directives apply).
 
 ### Comment syntax per format
 
@@ -212,7 +216,7 @@ style is assigned a scope.
 | PHP        | `.php`                               | `//`, `#`, `/*...*/` → `text.comment.line.ext` | `/*` → `text.comment.block.ext`        |
 | PowerShell | `.ps1`                               | `#`, `<#...#>` → `text.comment.line.ext`       | `<#` → `text.comment.block.ext`        |
 | Protobuf   | `.proto`                             | `//`, `/*...*/` → `text.comment.line.ext`      | `/*` → `text.comment.block.ext`        |
-| Python     | `.py`, `.py3`, `.pyw`, `.pyi`, `rpy` | `#` → `text.comment.line.ext`                  | `"""` → `text.comment.block.ext`       |
+| Python     | `.py`, `.py3`, `.pyw`, `.pyi`, `.rpy` | `#` → `text.comment.line.ext`                  | `"""` → `text.comment.block.ext`       |
 | R          | `.r`, `.R`                           | `#` → `text.comment.line.ext`                  | —                                      |
 | Ruby       | `.rb`                                | `#` → `text.comment.line.ext`                  | `^=begin` → `text.comment.block.ext`   |
 | Rust       | `.rs`                                | `//` → `text.comment.line.ext`                 | —                                      |
