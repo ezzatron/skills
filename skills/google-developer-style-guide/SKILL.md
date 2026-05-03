@@ -41,8 +41,3 @@ jq '.[] | select(.term == "click")' skills/google-developer-style-guide-word-lis
 jq '[.[] | select(.recommendation == "not recommended")] | length' skills/google-developer-style-guide-word-list/word-list.json
 ```
 
-## Source
-
-All content condensed from https://developers.google.com/style (accessed
-2026-05-03). Licensed under
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
