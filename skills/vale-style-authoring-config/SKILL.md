@@ -214,7 +214,7 @@ Mode.
 ```ini
 [*.md]
 BasedOnStyles = Vale
-TokenIgnores = ($+[^\n$]+$+), (:math:`.*`)
+TokenIgnores = (\$+[^\n$]+\$+), (:math:`.*`)
 ```
 
 ### CommentDelimiters
