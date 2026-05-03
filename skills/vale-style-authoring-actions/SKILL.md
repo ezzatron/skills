@@ -20,7 +20,7 @@ keys (`extends`, `message`, `tokens`, etc.).
 | --------- | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | `suggest` | `func suggest(match string) []string` | Returns an array of dynamically-computed suggestions (via script or spelling dictionaries).                                 |
 | `replace` | `func replace(match string) []string` | Returns an array of static, user-provided replacement strings. Auto-populated by `substitution` and `capitalization` rules. |
-| `remove`  | `func remove(match string)`           | Removes the matched text entirely. Takes no parameters.                                                                     |
+| `remove`  | `func remove(match string)`           | Removes the matched text entirely. Takes no `params`.                                                               |
 | `edit`    | `func edit(match string) string`      | Performs an in-place edit on the matched text using a named operation and parameters.                                       |
 
 Actions fall into two categories:
@@ -153,8 +153,9 @@ tokens:
 ## Fixer: `replace`
 
 Returns an array of static replacement suggestions provided via `params`. Rules
-that extend `substitution` or `capitalization` auto-populate `params` from their
-swap maps, so only `name` is needed.
+that extend `substitution` auto-populate `params` from their swap maps, and
+rules that extend `capitalization` auto-populate `params` from the expected case
+form, so only `name` is needed.
 
 ### Fields
 
