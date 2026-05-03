@@ -85,7 +85,6 @@ Associates an **observed** string with a **preferred** replacement.
 | `capitalize` | `bool`  | `false` | Matches the capitalization of the source token.                                            |
 | `exceptions` | `array` | `[]`    | Strings to ignore.                                                                         |
 | `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies.                                                |
-| `append`     | `bool`  | `false` | Appends `raw` to end of `tokens`.                                                          |
 | `action`     | `map`   | —       | Required when using multiple suggestions (pipe-separated values).                          |
 
 `swap` keys can be regexes (e.g. `'(?:give|gave) rise to': lead to`). Capture
