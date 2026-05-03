@@ -20,8 +20,9 @@ These keys are available on every check type (not repeated per-type below):
 | `extends` | `string` | **Required.** The check type name.                                          |
 | `message` | `string` | Alert message. Use `%s` for match interpolation.                            |
 | `level`   | `string` | `suggestion`, `warning`, or `error`.                                        |
-| `scope`   | `string` | The scope to lint (e.g. `heading`, `sentence`, `text`, `raw`, `paragraph`). |
+| `scope`   | `string \| array` | The scope to lint (e.g. `heading`, `sentence`, `text`, `raw`, `paragraph`). Accepts a YAML array for multiple or chained selectors. |
 | `link`    | `string` | URL for additional context shown with the alert.                            |
+| `limit`   | `int`    | Max times the rule can trigger per file.                                    |
 
 ---
 
@@ -42,8 +43,9 @@ Flags the **presence** of particular tokens (words, phrases, or regex patterns).
 | `vocab`      | `bool`  | `true`  | Set `false` to disable active vocabularies for this rule.                 |
 | `action`     | `map`   | —       | Options for correcting matches (see Vale actions docs).                   |
 
-`tokens` entries are compiled into `(?i)(?m)\b(?:token1|token2)\b`. Use `raw`
-when you need full regex control; entries are concatenated.
+`tokens` entries are compiled into `(?m)\b(?:token1|token2)\b` (`(?i)` is added
+when `ignorecase: true`). Use `raw` when you need full regex control; entries
+are concatenated.
 
 `message` supports one `%s` placeholder replaced with the matched text. When an
 `action` is configured, a second `%s` is available for the action's suggested
@@ -552,15 +554,19 @@ p_limit := 3
 document := text.re_replace("(?s) *(\n```.*?```\n)", scope, "")
 
 count := 0
+offset := 0
 for line in text.split(document, "\n") {
+    start := text.index(scope[offset:], line)
     if text.has_prefix(line, "#") {
         count = 0
     } else if count > p_limit {
-        start := text.index(scope, line)
-        matches = append(matches, {begin: start, end: start + len(line)})
+        matches = append(matches, {begin: offset + start, end: offset + start + len(line)})
         count = 0
     } else if text.trim_space(line) == "" {
         count += 1
+    }
+    if start >= 0 {
+        offset += start + len(line)
     }
 }
 ````
