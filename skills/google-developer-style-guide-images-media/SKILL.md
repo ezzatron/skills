@@ -44,7 +44,7 @@ the discussion.
 - **Don't** use image maps. Provide a list of text references instead.
   - Reasons: accessibility problems, inconsistent browser support, scaling
     issues on mobile, maintenance complexity of coordinate overlays.
-- Use descriptive filenames (see Google filenames guide).
+- Use descriptive filenames (see the Filenames and file types section in the `google-developer-style-guide-formatting` skill).
 
 ## Text associated with images
 
