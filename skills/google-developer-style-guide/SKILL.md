@@ -35,10 +35,10 @@ lookups, query `word-list.json` with `jq`:
 
 ```bash
 # Find guidance for a specific term
-jq '.[] | select(.term == "click")' word-list.json
+jq '.[] | select(.term == "click")' skills/google-developer-style-guide-word-list/word-list.json
 
 # List all "not recommended" terms
-jq '[.[] | select(.recommendation == "not recommended")] | length' word-list.json
+jq '[.[] | select(.recommendation == "not recommended")] | length' skills/google-developer-style-guide-word-list/word-list.json
 ```
 
 ## Source
