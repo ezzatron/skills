@@ -4,16 +4,10 @@ description:
   Use whenever the user asks to address, work through, respond to, or "go
   through" GitHub pull request review feedback — phrases like "address the PR
   comments", "respond to review feedback", "go through unresolved threads", or
-  anything that points at a PR's review conversation. Drives an iterative loop
-  that queries unresolved review threads, investigates each, presents a take
-  with recommendations, lets the user confirm or adjust, produces atomic commits
-  for fixes, pushes them, replies to each thread (with auto-generation
-  disclosure), resolves threads, keeps the PR description and any in-PR spec or
-  plan docs in sync with the current state of the work, and re-queries until
-  nothing remains. On termination with tackled commits, suggests requesting a
-  re-review and sends it after user confirmation. Requires interactive user
-  review and refuses to run in fully autonomous modes. Use this even when the
-  user does not name the PR explicitly — infer it from the current branch.
+  anything that points at a PR's review conversation. Iteratively queries
+  unresolved threads, presents recommendations, applies fixes, replies, and
+  resolves until nothing remains. Requires interactive user review. Infer the PR
+  from the current branch if not named explicitly.
 ---
 
 # Addressing GitHub PR review feedback
