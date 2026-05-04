@@ -173,6 +173,11 @@ For each unresolved thread:
 - Note threads that have effectively resolved themselves in discussion (e.g.,
   the reviewer wrote "nm, found it").
 
+Reviewers typically flag one instance of a problem rather than repeating
+themselves everywhere. After forming a take on a thread, check the rest of the
+PR diff for the same or closely related issues and include any you find in your
+recommendations.
+
 ### Step 3 — Present recommendations and get decisions
 
 Present your takes grouped and with a recommended action for each thread:
@@ -189,7 +194,8 @@ Include each thread's URL so the user can jump to the conversation. For example:
 > I'd recommend fixing these:
 >
 > 1. **Missing null check in token refresh** ([thread](url)) — reviewer is
->    right, `exp` can be null from this IdP.
+>    right, `exp` can be null from this IdP. I also found the same missing
+>    check at `auth/session.ts:42` and `auth/verify.ts:88` in the diff.
 > 2. **Stale comment on retry logic** ([thread](url)) — the comment references
 >    the old timeout value.
 >
