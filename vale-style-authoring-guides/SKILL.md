@@ -201,7 +201,7 @@ The Vale Language Server (`vale-ls`) wraps a local Vale installation via the
 [Language Server Protocol](https://microsoft.github.io/language-server-protocol/),
 providing autocomplete, diagnostics, hover popups, and more.
 
-Download releases from [GitHub](https://github.com/errata-ai/vale-ls/releases).
+Download releases from [GitHub](https://github.com/vale-cli/vale-ls/releases).
 
 ### Configuration (`initializationParams`)
 
@@ -225,7 +225,7 @@ Download releases from [GitHub](https://github.com/errata-ai/vale-ls/releases).
 | Obsidian       | [obsidian-vale](https://github.com/ChrisChinchilla/obsidian-vale)                                         |
 | Oxygen XML     | [Vale linter add-on](https://www.oxygenxml.com/doc/versions/23.1/ug-editor/topics/vale-linter-addon.html) |
 | Qt Creator     | [Setting up Vale](https://wiki.qt.io/Setting_Up_Vale)                                                     |
-| GitHub Actions | [vale-action](https://github.com/errata-ai/vale-action)                                                   |
+| GitHub Actions | [vale-action](https://github.com/vale-cli/vale-action)                                                    |
 | CircleCI       | [vale orb](https://circleci.com/developer/orbs/orb/circleci/vale)                                         |
 | Git hooks      | [pre-commit integration](https://vale.sh/docs/integrations/pre-commit)                                    |
 | Laravel        | [laravel-prose-linter](https://github.com/beyondcode/laravel-prose-linter)                                |

@@ -372,7 +372,7 @@ The `Packages` key accepts four types of values:
 
 ```ini
 Packages = Microsoft,
-  https://github.com/errata-ai/errata.ai/releases/download/v1.0.0/Test.zip
+  https://github.com/vale-cli/packages/releases/download/v1.0.0/Test.zip
 ```
 
 ### Package types
