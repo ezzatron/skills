@@ -100,10 +100,12 @@ else.
 Fetch the PR metadata. Record:
 
 - **PR number or identifier** — used in every subsequent query.
-- **PR author** — treat any review-thread comments from this user as if they
-  came from the user you are chatting with. Their wording in a thread carries
-  the same weight as instructions in chat. If they conceded a point in-thread,
-  that concession stands.
+- **PR author** — the login that opened the PR.
+- **Chatter identity** — the person you are chatting with. Assume this is the
+  PR author unless the user tells you otherwise (e.g., by stating their
+  username). Treat any review-thread comments from the chatter's identity as
+  instructions with the same weight as chat messages. If they conceded a point
+  in-thread, that concession stands.
 - **Repository context** — for fork PRs, the base repo owns review threads
   (replies and resolutions go there) but the head repo is where commits push.
 
