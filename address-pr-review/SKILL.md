@@ -12,10 +12,9 @@ description:
 
 # Addressing GitHub PR review feedback
 
-Drive a loop that walks unresolved review threads on a pull request, lets the
-user decide what to do about each, and applies the chosen actions — committing
-fixes, replying to threads, and resolving them — until no unresolved threads
-remain.
+Drive a loop that walks unresolved review feedback on a pull request, lets the
+user decide what to do about each item, and applies the chosen actions —
+committing fixes, replying, and resolving — until nothing actionable remains.
 
 The loop matters more than any single step. Reviewers may comment while you
 work, replies may fail to post, or the user may want to defer something. The
@@ -113,7 +112,7 @@ Fetch the PR metadata. Record:
 Repeat until the unresolved-thread query returns empty (or the user asks to
 stop):
 
-1. Query unresolved threads.
+1. Query unresolved feedback.
 2. Investigate and present a take on each, with a recommended action.
 3. Get the user's decisions (confirm, adjust, or defer).
 4. Apply fixes as atomic commits, then push.
@@ -127,7 +126,7 @@ step 1's results so the loop can terminate.
 
 ---
 
-### Step 1 — Query unresolved threads
+### Step 1 — Query unresolved feedback
 
 Fetch all review threads on the PR. You need, at minimum:
 
@@ -155,6 +154,13 @@ termination.
 > node IDs and the `isResolved`/`isOutdated` fields together. MCP and REST
 > alternatives may not return thread node IDs suitable for the reply and resolve
 > mutations.
+
+Not all review feedback lives in threads. Reviews can carry a top-level body
+comment (the summary the reviewer writes when submitting), and the PR
+conversation may contain standalone comments not attached to any review or code
+line. Check for these too — they often carry high-level concerns or requests
+that don't map to a single file. Surface them alongside threads in step 2 and
+apply the same user-approval workflow.
 
 ### Step 2 — Investigate and form a take
 
@@ -194,8 +200,8 @@ Include each thread's URL so the user can jump to the conversation. For example:
 > I'd recommend fixing these:
 >
 > 1. **Missing null check in token refresh** ([thread](url)) — reviewer is
->    right, `exp` can be null from this IdP. I also found the same missing
->    check at `auth/session.ts:42` and `auth/verify.ts:88` in the diff.
+>    right, `exp` can be null from this IdP. I also found the same missing check
+>    at `auth/session.ts:42` and `auth/verify.ts:88` in the diff.
 > 2. **Stale comment on retry logic** ([thread](url)) — the comment references
 >    the old timeout value.
 >
@@ -310,7 +316,9 @@ the PR.
 When the loop terminates with at least one tackled commit pushed, suggest
 requesting a re-review.
 
-**Default reviewer set.** Build it as the union of:
+### Default reviewer set
+
+Build it as the union of:
 
 - Authors of the originating comment on each tackled thread, excluding the PR
   author and any identity you've been posting under.
@@ -320,13 +328,13 @@ Present the default set and let the user confirm, edit, or skip.
 
 Once confirmed, use `gh pr edit --add-reviewer` to send the requests.
 
-> **GitHub-specific notes:**
->
-> - `gh pr view --json reviewRequests` silently drops Bot-typed reviewers. To
->   include bots and teams, query `reviewRequests` via GraphQL with explicit
->   `... on User`, `... on Bot`, and `... on Team` type fragments.
-> - The REST `/requested_reviewers` endpoint rejects bot logins with 422. If
->   `gh pr edit` fails for a bot, retry with just that bot's login via
->   `gh pr edit`; don't fall back to REST for bots.
-> - `gh pr edit --add-reviewer` works for both first-time requests and
->   re-requests from reviewers who already submitted.
+### GitHub-specific notes
+
+- `gh pr view --json reviewRequests` silently drops Bot-typed reviewers. To
+  include bots and teams, query `reviewRequests` via GraphQL with explicit
+  `... on User`, `... on Bot`, and `... on Team` type fragments.
+- The REST `/requested_reviewers` endpoint rejects bot logins with 422. If
+  `gh pr edit` fails for a bot, retry with just that bot's login via
+  `gh pr edit`; don't fall back to REST for bots.
+- `gh pr edit --add-reviewer` works for both first-time requests and re-requests
+  from reviewers who already submitted.
