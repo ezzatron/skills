@@ -2,7 +2,7 @@
 name: address-pr-review
 description:
   Use whenever the user asks to address, work through, respond to, or "go
-  through" GitHub pull request review feedback — phrases like "address the PR
+  through" pull request review feedback — phrases like "address the PR
   comments", "respond to review feedback", "go through unresolved threads", or
   anything that points at a PR's review conversation. Iteratively queries
   unresolved threads, presents recommendations, applies fixes, replies, and
@@ -10,7 +10,7 @@ description:
   from the current branch if not named explicitly.
 ---
 
-# Addressing GitHub PR review feedback
+# Addressing PR review feedback
 
 Drive a loop that walks unresolved review feedback on a pull request, lets the
 user decide what to do about each item, and applies the chosen actions —
@@ -57,7 +57,7 @@ circumstances.
 
 8. **Auto-generation disclosure must be visible.** Every reply must end with a
    visible line identifying the agent and that the reply was auto-generated. An
-   HTML comment alone is not enough — many GitHub clients hide them.
+   HTML comment alone is not enough — many platforms hide or strip them.
 
 9. **Never request re-review without user confirmation.** Re-review pings real
    people. The user decides whether and from whom.
@@ -86,8 +86,8 @@ When in doubt, treat as user-authored.
 
 Before starting, confirm:
 
-- `gh` CLI is authenticated with `repo` scope (write access to the PR is needed
-  for reply and resolve mutations).
+- The platform CLI or API is authenticated with write access to the PR (needed
+  for posting replies and resolving threads).
 - `git` is configured and the working tree is clean enough to make commits.
 - A target PR exists. If the user did not name one, infer it from the current
   branch.
@@ -99,13 +99,13 @@ else.
 
 Fetch the PR metadata. Record:
 
-- **PR number** — used in every subsequent query.
-- **PR author** (`author.login`) — treat any review-thread comments from this
-  login as if they came from the user you are chatting with. Their wording in a
-  thread carries the same weight as instructions in chat. If they conceded a
-  point in-thread, that concession stands.
-- **Owner and repo** — for fork PRs, the base repo owns review threads (replies
-  and resolutions go there) but the head repo is where commits push.
+- **PR number or identifier** — used in every subsequent query.
+- **PR author** — treat any review-thread comments from this user as if they
+  came from the user you are chatting with. Their wording in a thread carries
+  the same weight as instructions in chat. If they conceded a point in-thread,
+  that concession stands.
+- **Repository context** — for fork PRs, the base repo owns review threads
+  (replies and resolutions go there) but the head repo is where commits push.
 
 ## The loop
 
@@ -130,30 +130,25 @@ step 1's results so the loop can terminate.
 
 Fetch all review threads on the PR. You need, at minimum:
 
-- **Per thread:** node ID (needed for reply/resolve mutations), `isResolved`,
-  `isOutdated`, file path, line number (current and original).
-- **Per comment:** node ID, author login, body, creation timestamp, URL, and the
+- **Per thread:** a stable identifier (needed for reply and resolve operations),
+  resolution status, whether the thread is outdated, file path, line number
+  (current and original).
+- **Per comment:** identifier, author, body, creation timestamp, URL, and the
   diff hunk for context.
 
-Paginate if needed. Use the literal `isResolved` field — do not invent your own
-definition of "resolved" based on conversation content. A thread where the
-reviewer wrote "lgtm now" but didn't click resolve is still unresolved.
+Paginate if needed. Use the platform's literal resolution status — do not invent
+your own definition of "resolved" based on conversation content. A thread where
+the reviewer wrote "lgtm now" but didn't click resolve is still unresolved.
 
 From the results:
 
-- Keep threads where `isResolved` is false.
+- Keep threads that are not resolved.
 - Drop threads in the session's deferred set.
 - Drop threads whose only comments are your own auto-generated replies from
   earlier iterations.
 
 If nothing remains, the loop is done. Confirm with the user and move to
 termination.
-
-> **GitHub-specific note:** The `gh api graphql` command with the
-> `pullRequest.reviewThreads` connection is the most reliable way to get thread
-> node IDs and the `isResolved`/`isOutdated` fields together. MCP and REST
-> alternatives may not return thread node IDs suitable for the reply and resolve
-> mutations.
 
 Not all review feedback lives in threads. Two other sources are common:
 
@@ -262,21 +257,16 @@ For the reply body:
   that.
 - **All replies:** end with a visible auto-generation disclosure (rule 8).
 
-Post replies using the GraphQL `addPullRequestReviewThreadReply` mutation (it
-takes the thread node ID from step 1).
+Post replies using the platform's thread-reply API (it needs the thread
+identifier from step 1).
 
 If a reply fails to post, do not resolve that thread. Flag the failure to the
 user.
 
-> **GitHub-specific note:** Write commit SHAs and URLs as bare text in reply
-> bodies, not inside backticks. GitHub's autolinker only works on unformatted
-> SHAs (7+ characters) and bare URLs. Backticks render as inline code with no
-> link.
-
 ### Step 6 — Resolve each addressed thread
 
 Only after the reply has posted successfully, resolve the thread using the
-GraphQL `resolveReviewThread` mutation.
+platform's resolve/close API.
 
 If resolution fails, surface it. The reply already exists so the trail is
 intact, but the user may need to resolve manually.
@@ -332,9 +322,40 @@ Build it as the union of:
 
 Present the default set and let the user confirm, edit, or skip.
 
-Once confirmed, use `gh pr edit --add-reviewer` to send the requests.
+Once confirmed, use the platform's re-review request mechanism to send the
+requests.
 
-### GitHub-specific notes
+## Platform: GitHub
+
+This section collects implementation details specific to GitHub. When working on
+a different platform, adapt the concepts above using that platform's equivalents.
+
+### Querying threads (step 1)
+
+The `gh api graphql` command with the `pullRequest.reviewThreads` connection is
+the most reliable way to get thread node IDs and the `isResolved`/`isOutdated`
+fields together. MCP and REST alternatives may not return thread node IDs
+suitable for the reply and resolve mutations.
+
+### Posting replies (step 5)
+
+Use the GraphQL `addPullRequestReviewThreadReply` mutation with the thread node
+ID from step 1.
+
+Write commit SHAs and URLs as bare text in reply bodies, not inside backticks.
+GitHub's autolinker only works on unformatted SHAs (7+ characters) and bare
+URLs. Backticks render as inline code with no link.
+
+### Resolving threads (step 6)
+
+Use the GraphQL `resolveReviewThread` mutation.
+
+### Requesting re-review
+
+Use `gh pr edit --add-reviewer` to send requests. It works for both first-time
+requests and re-requests from reviewers who already submitted.
+
+Quirks to watch for:
 
 - `gh pr view --json reviewRequests` silently drops Bot-typed reviewers. To
   include bots and teams, query `reviewRequests` via GraphQL with explicit
@@ -342,5 +363,3 @@ Once confirmed, use `gh pr edit --add-reviewer` to send the requests.
 - The REST `/requested_reviewers` endpoint rejects bot logins with 422. If
   `gh pr edit` fails for a bot, retry with just that bot's login via
   `gh pr edit`; don't fall back to REST for bots.
-- `gh pr edit --add-reviewer` works for both first-time requests and re-requests
-  from reviewers who already submitted.
