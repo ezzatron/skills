@@ -155,12 +155,18 @@ termination.
 > alternatives may not return thread node IDs suitable for the reply and resolve
 > mutations.
 
-Not all review feedback lives in threads. Reviews can carry a top-level body
-comment (the summary the reviewer writes when submitting), and the PR
-conversation may contain standalone comments not attached to any review or code
-line. Check for these too — they often carry high-level concerns or requests
-that don't map to a single file. Surface them alongside threads in step 2 and
-apply the same user-approval workflow.
+Not all review feedback lives in threads. Two other sources are common:
+
+- **Review body comments** — the summary a reviewer writes when submitting.
+  These often frame the overall concern that inline threads elaborate on.
+- **PR conversation comments** — standalone comments on the conversation tab,
+  not attached to any review or code line. Reviewers frequently post these as
+  follow-ups after submitting a review, when they realize they forgot something
+  or want to add context that doesn't fit a specific file.
+
+Check for both. They often carry high-level concerns or requests that don't map
+to a single line of code. Surface them alongside threads in step 2 and apply the
+same user-approval workflow.
 
 ### Step 2 — Investigate and form a take
 
