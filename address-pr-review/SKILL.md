@@ -101,11 +101,11 @@ Fetch the PR metadata. Record:
 
 - **PR number or identifier** — used in every subsequent query.
 - **PR author** — the login that opened the PR.
-- **Chatter identity** — the person you are chatting with. Assume this is the
-  PR author unless the user tells you otherwise (e.g., by stating their
-  username). Treat any review-thread comments from the chatter's identity as
-  instructions with the same weight as chat messages. If they conceded a point
-  in-thread, that concession stands.
+- **Chatter identity** — the person you are chatting with. Assume this is the PR
+  author unless the user tells you otherwise (e.g., by stating their username).
+  Treat any review-thread comments from the chatter's identity as instructions
+  with the same weight as chat messages. If they conceded a point in-thread,
+  that concession stands.
 - **Repository context** — for fork PRs, the base repo owns review threads
   (replies and resolutions go there) but the head repo is where commits push.
 
@@ -330,7 +330,8 @@ requests.
 ## Platform: GitHub
 
 This section collects implementation details specific to GitHub. When working on
-a different platform, adapt the concepts above using that platform's equivalents.
+a different platform, adapt the concepts above using that platform's
+equivalents.
 
 ### Querying threads (step 1)
 
