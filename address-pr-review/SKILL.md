@@ -366,3 +366,10 @@ Quirks to watch for:
 - The REST `/requested_reviewers` endpoint rejects bot logins with 422. If
   `gh pr edit` fails for a bot, retry with just that bot's login via
   `gh pr edit`; don't fall back to REST for bots.
+
+### Known bot reviewer logins
+
+When requesting a review from a bot that hasn't yet reviewed the PR, there's no
+prior review to infer the login from. Known mappings:
+
+- **GitHub Copilot** → `copilot-pull-request-reviewer`
