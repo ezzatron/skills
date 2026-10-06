@@ -103,9 +103,9 @@ Fetch the PR metadata. Record:
 - **PR author** — the login that opened the PR.
 - **Chatter identity** — the person you are chatting with. Assume this is the PR
   author unless the user tells you otherwise (e.g., by stating their username).
-  Treat any review-thread comments from the chatter's identity as instructions
-  with the same weight as chat messages. If they conceded a point in-thread,
-  that concession stands.
+  Treat any comments from the chatter's identity as instructions with the same
+  weight as chat messages. If they conceded a point in-thread, that concession
+  stands.
 - **Repository context** — for fork PRs, the base repo owns review threads
   (replies and resolutions go there) but the head repo is where commits push.
 
@@ -149,21 +149,25 @@ From the results:
 - Drop threads whose only comments are your own auto-generated replies from
   earlier iterations.
 
-If nothing remains, the loop is done. Confirm with the user and move to
-termination.
-
 Not all review feedback lives in threads. Two other sources are common:
 
 - **Review body comments** — the summary a reviewer writes when submitting.
-  These often frame the overall concern that inline threads elaborate on.
+  These often frame the overall concern that inline threads elaborate on, but
+  sometimes contain findings that exist nowhere else in the review. Read them in
+  full, including any collapsed or nested sections. These have no resolution
+  status, so judge for yourself whether the feedback has been addressed. The
+  latest comment supersedes earlier ones.
 - **PR conversation comments** — standalone comments on the conversation tab,
   not attached to any review or code line. Reviewers frequently post these as
   follow-ups after submitting a review, when they realize they forgot something
   or want to add context that doesn't fit a specific file.
 
-Check for both. They often carry high-level concerns or requests that don't map
-to a single line of code. Surface them alongside threads in step 2 and apply the
-same user-approval workflow.
+Check for both on every iteration. They often carry high-level concerns or
+requests that don't map to a single line of code. Surface them alongside threads
+in step 2 and apply the same user-approval workflow.
+
+If nothing remains across all threads and other sources of feedback, the loop is
+done. Confirm with the user and move to termination.
 
 ### Step 2 — Investigate and form a take
 
@@ -261,6 +265,9 @@ For the reply body:
 
 Post replies using the platform's thread-reply API (it needs the thread
 identifier from step 1).
+
+Feedback with no thread (review bodies, conversation comments) should be replied
+to via the appropriate channel, such as a review comment or conversation reply.
 
 If a reply fails to post, do not resolve that thread. Flag the failure to the
 user.
